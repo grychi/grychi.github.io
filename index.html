@@ -1,0 +1,156 @@
+﻿<!--Gary Chi-->
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Gary Chi</title>
+      <link href="stylesheet.css" type="text/css" rel="stylesheet" />
+	  <link href="canvas.css" type="text/css" rel="stylesheet" />
+	  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	  <script type="text/javascript" src="js/canvasScript.js"></script>
+      <script>
+         $(function() {
+           $('a[href*=#]:not([href=#])').click(function() {
+         	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+         	  var target = $(this.hash);
+         	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+         	  if (target.length) {
+         		$('html,body').animate({
+         		  scrollTop: target.offset().top
+         		}, 1000);
+         		return false;
+         	  }
+         	}
+           });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id="topBar">
+         <a href="#home">Gary Chi <br /><!--<span id="topBot">comp sci</span>--></a>
+      </div>
+	  
+	  <div id="navigation">
+		<a href="#about">about</a> -
+		<a href="#resume">resume</a> -
+		<a href="#projects">projects</a> -
+		<a href="#contact">contact</a>
+	  </div>
+	  
+      <div id="home" class="content contentA">
+         <a href="#about">
+            <div class="next button">
+               <br />
+               <span class="arrows">
+               &gt;
+               </span>
+            </div>
+         </a>
+		 <div id="welcome">hi there,</div>
+		 <div id="canvas"> </div>
+      </div>
+	  
+	  <div id="about" class="content contentB">
+         <a href="#resume">
+            <div class="next button">
+               <br />
+               <span class="arrows">
+               &gt;
+               </span>
+            </div>
+         </a>
+         <a href="#home">
+            <div class="back button">
+               <br />
+               <span class="arrows">
+               &lt;
+               </span>
+            </div>
+         </a>
+         <div class = "aniDivL">
+            <h2>About Me</h2>
+            <p>
+				I may present myself as a front-end web developer, but I am also interested in all of technology. I admittedly spend a lot of my time in front of a screen because one of my passions is coding. Many of the programming languages I know are self-taught through reading documentations and practice. I am currently a rising sophomore studying at New York University (Tandon School of Engineering). I major in computer science where I can expand my technological knowledge. Other times when I'm not coding, I will often draw or design things such as this website, so consider me a graphic designer as well. I seek to be inspired and to work hard doing things I enjoy.
+            </p>
+         </div>
+      </div>
+	  
+      <div id="resume" class="content contentA">
+         <a href="#projects">
+            <div class="next button">
+               <br />
+               <span class="arrows">
+               &gt;
+               </span>
+            </div>
+         </a>
+         <a href="#about">
+            <div class="back button">
+               <br />
+               <span class="arrows">
+               &lt;
+               </span>
+            </div>
+         </a>
+         <div class = "aniDivL">
+            <h2>The Details</h2>
+            <p>
+				Here is a brief description of my skills and experience. If you're interested to see a more-detailed resume, feel free to <a href="#contact">contact me</a>.
+				<br><br><span style="font-size: 1.2em;">skills - tools - experience</span>
+            </p>
+         </div>
+      </div>
+	  
+      <div id="projects" class="content contentB">
+         <a href="#contact">
+            <div class="next button">
+               <br />
+               <span class="arrows">
+               &gt;
+               </span>
+            </div>
+         </a>
+         <a href="#resume">
+            <div class="back button">
+               <br />
+               <span class="arrows">
+               &lt;
+               </span>
+            </div>
+         </a>
+         <div class = "aniDivL">
+            <h2>Current Projects</h2>
+			<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a>click here</a>.
+			<br><br>
+			I've made this website quite recently actually and it is still a work in progress. The first panel is my code canvas. I will be updating it with HTML/CSS works I make from time to time. The mountains are randomly generated and its colors change based on the time of the day. The clouds and other subtle animations is done through css and jQuery. I am also currently optimizing this site for small screens and mobile display.</p>
+         </div>
+		 <!--<div id="projContainer">
+			
+		 </div>-->
+      </div>
+	  
+      <div id="contact" class="content contentA">
+         <a href="#projects">
+            <div class="back button">
+               <br />
+               <span class="arrows">
+               &lt;
+               </span>
+            </div>
+         </a>
+         <div class = "aniDivL">
+            <h2>Contact Me</h2>
+            <p>
+				If you're interested to get in touch, go ahead and send an e-mail to <a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>. <br> Or you can fill out the form below. <br>
+				<form method="post">
+					<input type="email" name="cEmail" placeholder="E-mail">
+				   <textarea name="cText" placeholder="Please do not enter anything here. Doesn't work yet!" cols="80" rows="10"></textarea>
+				   <input name="cSubmit" type="submit" value="submit" style="min-width: 8em; width: 10vw">
+				</form>
+            </p>
+         </div>
+      </div>
+   </body>
+</html>
