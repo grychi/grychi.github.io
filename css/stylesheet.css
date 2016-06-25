@@ -1,0 +1,175 @@
+/*Gary Chi*/
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    font: 2vh 'Catamaran', calibri, sans-serif, tahoma;
+    line-height: 200%;
+    color: gray;
+}
+h1, h2 {
+    color: #585858;
+}
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+    color: white;
+}
+#topBar {
+    position: fixed;
+    top: 2.5em;
+    padding: 1em;
+    padding-left: 6em;
+    z-index: 10;
+}
+#topBar > a {
+    font: 2.2em 'Catamaran', calibri, sans-serif, tahoma;
+    letter-spacing: -2px;
+    line-height: 0;
+    color: black;
+}
+#topBot {
+	font: .5em 'Catamaran', calibri, sans-serif, tahoma;
+	letter-spacing: 0px;
+	color: gray;
+}
+#navigation {
+	position: fixed;
+	top: 2em;
+	right: 2em;
+	font: 1.5em 'Catamaran', calibri, sans-serif, tahoma;
+	letter-spacing: -1px;
+	z-index: 20;
+}
+#navigation > a {
+	color: #A0A0A0;
+}
+#navigation > a:hover {
+	color: gray;
+}
+.content {
+    position: relative;
+    height: 100vh;
+    min-height: 40em;
+	min-width: 44em;
+    width: 100%;
+}
+.contentA {
+    background-color: #EFEFEF;
+}
+.contentB {
+    background-color: #F2F2F2;
+}
+p > a {
+	color: #404040;
+}
+p > a:hover {
+    color: #888888;
+}
+.button {
+    height: 4em;
+    width: 2em;
+    position: relative;
+    top: 44vh;
+    z-index: 1;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+	line-height: 125%;
+}
+.button:hover {
+    background-color: gray;
+    color: white;
+}
+.back {
+    float: left;
+    margin-left: 1em;
+}
+.next {
+    float: right;
+    margin-right: 1em;
+}
+span.arrows {
+    display: inline-block;
+    transform: scale(1, 2);
+    -webkit-transform: scale(1, 2);
+    -moz-transform: scale(1, 2);
+    -ms-transform: scale(1, 2);
+    -o-transform: scale(1, 2);
+    vertical-align: middle;
+}
+.contentDiv {
+    top: 30%;
+    width: 100%;
+    float: left;
+    position: absolute;
+    text-align: center;
+    background: transparent;
+}
+input, textarea {
+    padding: 10px;
+    border: none;
+	font: .8em 'Catamaran', calibri, sans-serif, tahoma;
+	margin: 1vh;
+}
+
+/*Content Animation*/
+.aniDivL, .aniDivR {
+	top: 20vh;
+	width: 40%;
+	position: relative;
+	background: transparent;
+}
+.aniDivL {
+    float: left;
+    animation: forward 1.5s;
+    -webkit-animation: forward 1.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.aniDivR {
+    float: right;
+    animation: backward 1.5s;
+    -webkit-animation: backward 1.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.aniL, .aniR {
+	top: 30vh;
+	position: relative;
+	background: transparent;
+}
+.aniL {
+    float: left;
+    animation: forward 1.5s;
+    -webkit-animation: forward 1.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+.aniR {
+    float: right;
+    animation: backward 1.5s;
+    -webkit-animation: backward 1.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/*Animation*/
+@keyframes forward {
+    0% {left:-10%;}
+    100% {left:10%;}
+}
+@-webkit-keyframes forward {
+    0% {left:-10%;}
+    100% {left:10%;}
+}
+@keyframes backward {
+    0% {right:-10%;}
+    100% {right:10%;}
+}
+@-webkit-keyframes backward {
+    0% {right:-10%;}
+    100% {right:10%;}
+}
