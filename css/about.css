@@ -1,1 +1,107 @@
 /*Gary Chi*/
+@charset "utf-8";
+#aboutCanvas {
+	height: 40vh;
+	width: 10vh;
+	background: transparent;
+}
+#person {
+	position: absolute;
+	left: -5vh;
+	bottom: 55%;
+	width: 16vh;
+	height: 20vh;
+	background-color: #585858;
+	border-radius:60% 60% 50% 50%/40% 40% 90% 90%;
+}
+#person:after, #person:before {
+	content:'';
+	position: absolute;
+}
+#person:after {
+	left: 1vh;
+	top: 6vh;
+	width: 14vh;
+	height: 15vh;
+	background: #FFF9E0;
+	border-radius:20% 120% 100% 100%/100% 30% 125% 125%;
+}
+#person:before {
+	top: 20vh;
+	left: -1vh;
+	width: 18vh;
+	height: 20vh;
+	background: repeating-linear-gradient(#9CD8D8,#9CD8D8 2px,#D8EFFF 2px,#D8EFFF 8px);
+}
+#arms:after, #arms:before {
+	content:'';
+	position: absolute;
+	top: 20vh;
+	width: 4vh;
+	height: 16vh;
+	background: #FFF9E0;
+}
+#arms:after {
+	left: 12vh;
+	transform: rotate(-8deg);
+}
+#arms:before {
+	left: -10vh;
+	transform: rotate(8deg);
+}
+#table {
+	height: 1.5vh;
+	width: 40vh;
+	top:92%;
+	left: -150%;
+	position: absolute;
+	background: #294755;
+	border-radius: 1vh;
+}
+#table:after, #table:before {
+	content:'';
+	position: absolute;
+	height: 3vh;
+	width: 5vh;
+	top: -200%;
+	background: #F7F1D9;
+}
+#table:after {
+	left: 10%;
+	border-radius: 100% 40% 0% 0%/100% 100% 0% 0%;
+}
+#table:before {
+	left: 68%;
+	border-radius: 40% 100% 0% 0%/100% 100% 0% 0%;
+}
+#screen {
+	position: absolute;
+	left: -15vh;
+	top: 20%;
+	height: 24vh;
+	width: 36vh;
+	background: #3D5F6E;
+	border-radius: 1.5vh;
+	color: #F2F2F2;
+}
+#screen:after, #screen:before {
+	content:'';
+	position: absolute;
+}
+#screen:after {
+	left: 37%;
+	bottom: -20%;
+	height: 0;
+	width: 6vh;
+	border-bottom: 9vh solid #779097;
+	border-left: 2vh solid transparent;
+	border-right: 2vh solid transparent;
+	border-radius: 1vh;
+}
+#screen:before {
+	left: 23%;
+	bottom: -20%;
+	height: .5vh;
+	width: 20vh;
+	background: #3D5F6E;
+}
