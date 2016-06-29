@@ -7,15 +7,15 @@ body {
     line-height: 200%;
     color: gray;
 }
-h1, h2 {
+h1, h2, h3 {
     color: #585858;
 }
 a {
 	text-decoration: none;
-	color: gray;
+	color: #585858;
 }
 a:hover {
-    color: white;
+    color: gray;
 }
 #topBar {
     position: fixed;
@@ -55,6 +55,7 @@ a:hover {
     min-height: 40em;
 	min-width: 44em;
     width: 100%;
+	overflow: hidden;
 }
 .contentA {
     background-color: #EFEFEF;
@@ -63,7 +64,7 @@ a:hover {
     background-color: #F2F2F2;
 }
 p > a {
-	color: #404040;
+	color: #585858;
 }
 p > a:hover {
     color: #888888;
@@ -74,14 +75,15 @@ p > a:hover {
     position: relative;
     top: 44vh;
     z-index: 1;
+	color: gray;
     background-color: white;
     border-radius: 4px;
     text-align: center;
 	line-height: 125%;
 }
 .button:hover {
+	color: white;
     background-color: gray;
-    color: white;
 }
 .back {
     float: left;
@@ -99,14 +101,6 @@ span.arrows {
     -ms-transform: scale(1, 2);
     -o-transform: scale(1, 2);
     vertical-align: middle;
-}
-.contentDiv {
-    top: 30%;
-    width: 100%;
-    float: left;
-    position: absolute;
-    text-align: center;
-    background: transparent;
 }
 input, textarea {
     padding: 10px;
@@ -137,7 +131,7 @@ input, textarea {
 	-webkit-animation-fill-mode: forwards;
 }
 .aniL, .aniR {
-	top: 30vh;
+	top: 20vh;
 	position: relative;
 	background: transparent;
 }

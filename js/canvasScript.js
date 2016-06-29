@@ -39,4 +39,23 @@ $(document).ready(function() {
 		currentScale = Math.random()*.2+.08;
 		$canv.append('<div class="mountain" style="left:' + mostLeft + 'vw; transform:scale(' + currentScale + '); border-bottom: 75vw solid ' + useColor[1] + ';"></div>');
 	}
+	var screenTog = true;
+	$("#screen").click(function() {
+		if(screenTog) {
+			$(this).html('<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>R</i></b></p>');
+		}
+		else {
+			$(this).html('<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>G</i></b></p>');
+		}
+		screenTog = !(screenTog);
+	});
+	/*$(document).on('click', '#screen', function() {
+		if(screenTog) {
+			$(this).html('<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>R</i></b></p>');
+		}
+		else {
+			$(this).html('<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>G</i></b></p>');
+		}
+		screenTog = !(screenTog);
+	});*/
 });
