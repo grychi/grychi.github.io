@@ -11,7 +11,7 @@
 	bottom: 55%;
 	width: 16vh;
 	height: 20vh;
-	background-color: #585858;
+	background-color: #404040;
 	border-radius:60% 60% 50% 50%/40% 40% 90% 90%;
 }
 #person:after, #person:before {
