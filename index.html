@@ -1,181 +1,182 @@
 <!--Gary Chi-->
 <!DOCTYPE HTML>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Gary Chi</title>
-  <link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
-  <link href="css/canvas.css" type="text/css" rel="stylesheet" />
-  <link href="css/about.css" type="text/css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="js/canvasScript.js"></script>
-  <script>
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-         	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-         	  var target = $(this.hash);
-         	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-         	  if (target.length) {
-         		$('html,body').animate({
-         		  scrollTop: target.offset().top
-         		}, 1000);
-         		return false;
-         	  }
-         	}
-        });
-    });
-  </script>
-</head>
-
-<body>
-  <div id="topBar">
-    <a href="#home">Gary Chi <br /><!--<span id="topBot">comp sci</span>--></a>
-  </div>
-
-  <div id="navigation">
-    <a href="#about">about</a> &nbsp
-    <a href="#resume">resume</a> &nbsp
-    <a href="#projects">projects</a> &nbsp
-    <a href="#contact">contact</a>
-  </div>
-
-  <div id="home" class="content contentA">
-    <a href="#about">
-      <div class="next button">
-        <br />
-        <span class="arrows">
-               &gt;
-               </span>
-      </div>
-    </a>
-    <div id="welcome">hi there,</div>
-    <div id="canvas"> </div>
-  </div>
-
-  <div id="about" class="content contentB">
-    <a href="#resume">
-      <div class="next button">
-        <br />
-        <span class="arrows">
-               &gt;
-               </span>
-      </div>
-    </a>
-    <a href="#home">
-      <div class="back button">
-        <br />
-        <span class="arrows">
-               &lt;
-               </span>
-      </div>
-    </a>
-    <div class="aniDivL">
-      <h2>About Me</h2>
-      <p>
-        I may present myself as a front-end web developer, but I am also interested in all of technology. I admittedly spend a lot of my time in front of a screen because one of my passions is coding. Many of the programming languages I know are self-taught through reading documentations and practice. I am currently a rising sophomore studying at New York University (Tandon School of Engineering). I major in computer science where I can expand my technological knowledge. Other times when I'm not coding, I will often draw or design things such as this website, so consider me a graphic designer as well. I seek to be inspired and to work hard doing things I enjoy.
-      </p>
-    </div>
-	<div id="aboutCanvas" class="aniR">
-		<div id="person"> </div>
-		<div id="arms"> </div>
-		<div id="table"> </div>
-		<div id="screen"> <p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>G</i></b></p> </div>
-	</div>
-  </div>
-
-  <div id="resume" class="content contentA">
-    <a href="#projects">
-      <div class="next button">
-        <br />
-        <span class="arrows">
-               &gt;
-               </span>
-      </div>
-    </a>
-    <a href="#about">
-      <div class="back button">
-        <br />
-        <span class="arrows">
-               &lt;
-               </span>
-      </div>
-    </a>
-    <div class="aniDivL">
-      <h2>The Details</h2>
-      <p>
-        Here is a brief description of my skills and experience. If you're interested to see a more detailed resume, feel free to <a href="#contact">contact me</a>.
-        <br><br><span style="font-size: 1.2em;"><a id="skills" href="#resume">skills</a> &nbsp <a id="tools" href="#resume">tools</a> &nbsp <a id="experience" href="#resume">experience</a></span>
-      </p>
-    </div>
-	<div id="skillCont" class="resCont">
-		<div id="skillA" class="box"> </div>
-		<div id="skillB" class="box"> </div>
-		<div id="skillC" class="box"> </div>
-	</div>
-	<div id="toolCont" class="resCont">
-		<div id="toolA" class="box"> </div>
-		<div id="toolB" class="box"> </div>
-		<div id="toolC" class="box"> </div>
-	</div>
-	<div id="expCont" class="resCont">
-		<div id="expA" class="box"> </div>
-		<div id="expC" class="box"> </div>
-		<div id="expD" class="box"> </div>
-	</div>
-  </div>
-
-  <div id="projects" class="content contentB">
-    <a href="#contact">
-      <div class="next button">
-        <br />
-        <span class="arrows">
-               &gt;
-               </span>
-      </div>
-    </a>
-    <a href="#resume">
-      <div class="back button">
-        <br />
-        <span class="arrows">
-               &lt;
-               </span>
-      </div>
-    </a>
-    <div class="aniDivL">
-      <h2>Current Projects</h2>
-      <p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a href="https://github.com/gbeargary">click here</a>.
-	  </p>
-    </div>
-    <!--<div id="projContainer">
-			
-		 </div>-->
-  </div>
-
-  <div id="contact" class="content contentA">
-    <a href="#projects">
-      <div class="back button">
-        <br />
-        <span class="arrows">
-               &lt;
-               </span>
-      </div>
-    </a>
-    <div class="aniDivL">
-      <h2>Contact Me</h2>
-      <p>
-        If you're interested to get in touch, go ahead and send an e-mail to <a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>. <br> Or you can fill out the form below. <br>
-        <form method="post">
-          <input type="email" name="cEmail" placeholder="E-mail">
-		  <br>
-          <textarea name="cText" placeholder="Doesn't work yet! I'm working on it." cols="80" rows="10"></textarea>
-		  <br>
-          <input name="cSubmit" type="submit" value="submit" style="min-width: 8em; width: 10vw">
-        </form>
-      </p>
-    </div>
-  </div>
-</body>
-
+	<head>
+		<meta charset="utf-8">
+		<title>Gary Chi</title>
+		<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
+		<link href="css/canvas.css" type="text/css" rel="stylesheet" />
+		<link href="css/about.css" type="text/css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/canvasScript.js"></script>
+		<script>
+			$(function() {
+			    $('a[href*=#]:not([href=#])').click(function() {
+			     	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			     	  var target = $(this.hash);
+			     	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			     	  if (target.length) {
+			     		$('html,body').animate({
+			     		  scrollTop: target.offset().top
+			     		}, 1000);
+			     		return false;
+			     	  }
+			     	}
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<div id="topBar">
+			<a href="#home">
+				Gary Chi <br /><!--<span id="topBot">comp sci</span>-->
+			</a>
+		</div>
+		<div id="navigation">
+			<a href="#about">about</a> &nbsp
+			<a href="#resume">resume</a> &nbsp
+			<a href="#projects">projects</a> &nbsp
+			<a href="#contact">contact</a>
+		</div>
+		<div id="home" class="content contentA">
+			<a href="#about">
+				<div class="next button">
+					<br />
+					<span class="arrows">
+					&gt;
+					</span>
+				</div>
+			</a>
+			<div id="welcome">hi there,</div>
+			<div id="canvas"> </div>
+		</div>
+		<div id="about" class="content contentB">
+			<a href="#resume">
+				<div class="next button">
+					<br />
+					<span class="arrows">
+					&gt;
+					</span>
+				</div>
+			</a>
+			<a href="#home">
+				<div class="back button">
+					<br />
+					<span class="arrows">
+					&lt;
+					</span>
+				</div>
+			</a>
+			<div class="aniDivL">
+				<h2>About Me</h2>
+				<p>
+					I may present myself as a front-end web developer, but I am also interested in all of technology. I admittedly spend a lot of my time in front of a screen because one of my passions is coding. Many of the programming languages I know are self-taught through reading documentations and practice. I am currently a rising sophomore studying at New York University (Tandon School of Engineering). I major in computer science where I can expand my technological knowledge. Other times when I'm not coding, I will often draw or design things such as this website, so consider me a graphic designer as well. I seek to be inspired and to work hard doing things I enjoy.
+				</p>
+			</div>
+			<div id="aboutCanvas" class="aniR">
+				<div id="person"> </div>
+				<div id="arms"> </div>
+				<div id="table"> </div>
+				<div id="screen">
+					<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;"><b><i><br>G</i></b></p>
+				</div>
+			</div>
+		</div>
+		<div id="resume" class="content contentA">
+			<a href="#projects">
+				<div class="next button">
+					<br />
+					<span class="arrows">
+					&gt;
+					</span>
+				</div>
+			</a>
+			<a href="#about">
+				<div class="back button">
+					<br />
+					<span class="arrows">
+					&lt;
+					</span>
+				</div>
+			</a>
+			<div class="aniDivL">
+				<h2>The Details</h2>
+				<p>
+					Here is a brief description of my skills and experience. If you're interested to see a more detailed resume, feel free to <a href="#contact">contact me</a>.
+					<br><br><span style="font-size: 1.2em;"><a id="skills" href="#resume">skills</a> &nbsp <a id="tools" href="#resume">tools</a> &nbsp <a id="experience" href="#resume">experience</a></span>
+				</p>
+			</div>
+			<div id="skillCont" class="resCont">
+				<div id="skillA" class="box"> </div>
+				<div id="skillB" class="box"> </div>
+				<div id="skillC" class="box"> </div>
+			</div>
+			<div id="toolCont" class="resCont">
+				<div id="toolA" class="box"> </div>
+				<div id="toolB" class="box"> </div>
+				<div id="toolC" class="box"> </div>
+			</div>
+			<div id="expCont" class="resCont">
+				<div id="expA" class="box"> </div>
+				<div id="expC" class="box"> </div>
+				<div id="expD" class="box"> </div>
+			</div>
+		</div>
+		<div id="projects" class="content contentB">
+			<a href="#contact">
+				<div class="next button">
+					<br />
+					<span class="arrows">
+					&gt;
+					</span>
+				</div>
+			</a>
+			<a href="#resume">
+				<div class="back button">
+					<br />
+					<span class="arrows">
+					&lt;
+					</span>
+				</div>
+			</a>
+			<div class="aniDivL">
+				<h2>Current Projects</h2>
+				<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a href="https://github.com/gbeargary">click here</a>.
+				</p>
+			</div>
+			<!--<div id="projContainer">
+				</div>-->
+		</div>
+		<div id="contact" class="content contentA">
+			<a href="#projects">
+				<div class="back button">
+					<br />
+					<span class="arrows">
+					&lt;
+					</span>
+				</div>
+			</a>
+			<div id="divForm" class="aniDivL">
+				<h2>Contact Me</h2>
+				<p>
+					If you're interested to get in touch, go ahead and send an e-mail to <a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>. <br> Or you can fill out the form below. <br>
+				<form id="cForm" method="POST" action="https://script.google.com/macros/s/AKfycbyMGSBHVxAGoKPhXVBb6D4DEab2ZvHABnrpFjsgfpN-0hxgdFq2/exec">
+					<input type="text" name="cName" placeholder="Name">
+					<br>
+					<input type="email" name="cEmail" placeholder="E-mail">
+					<br>
+					<textarea name="cMessage" placeholder="What do you have in mind?" cols="80" rows="10"></textarea>
+					<br>
+					<input type="submit" value="submit" style="min-width: 8em; width: 10vw">
+				</form>
+				</p>
+			</div>
+			<div id="divFormSent" class="aniDivL" style="display:none;" >
+				<h2>Thanks</h2>
+				<p> You have successfully sent your message. I will get back to you soon.</p>
+			</div>
+		</div>
+		<script data-cfasync="false" type="text/javascript" src="js/contactHandler.js"></script>
+	</body>
 </html>
