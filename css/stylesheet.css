@@ -171,15 +171,16 @@ input, textarea {
 /*Mobile*/
 #burger, #close {
 	position: fixed;
-	top: 3.5em;
 	cursor: pointer;
 	z-index: 10;
 }
 #burger {
+	top: 3em;
 	right: 3em;
 }
 #close {
 	transform:rotate(45deg);
+	top: 2.5em;
 	right: 3em;
 	display: none;
 }
@@ -196,13 +197,22 @@ input, textarea {
 	width: 100%;
 	background: #EFEFEF;
 	display: none;
-	z-index: 1;
+	font: 2em 'Catamaran', calibri, sans-serif, tahoma;
+	text-align: center;
+	vertical-align: middle;
+	z-index: 5;
 }
-@media (max-width:44em){
+#mMenu > a {
+	color: #A0A0A0;
+}
+#mMenu > a:hover {
+	color: gray;
+}
+@media (max-width:80vh){
 	#navigation { display: none; }
 	#burger { display: block;}
 }
-@media (min-width:44em) {
+@media (min-width:80vh) {
 	#navigation { display: block; }
 	#burger { display: none; }
 }

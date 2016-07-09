@@ -23,8 +23,8 @@ $(document).ready(function() {
 		$("#burger").toggle();
 		$("#mMenu").toggle();
 	});
-	$("#mMenu").click(function() {
-		$(this).toggle();
+	$(".mMenu").click(function() {
+		$("#mMenu").toggle();
 		$("#close").toggle();
 		$("#burger").toggle();
 	});
