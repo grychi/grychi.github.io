@@ -208,11 +208,11 @@ input, textarea {
 #mMenu > a:hover {
 	color: gray;
 }
-@media (max-width:100vh){
+@media (max-width:99vh){
 	#navigation { display: none; }
 	#burger { display: block;}
 }
-@media (min-width:100vh) {
+@media (min-width:101vh) {
 	#navigation { display: block; }
 	#burger { display: none; }
 }
