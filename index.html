@@ -14,6 +14,9 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="js/canvasScript.js"></script>
 		<script type="text/javascript" src="js/indexScript.js"></script>
+		<!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />-->
+		<link rel="shortcut icon" href="favicon.ico" />
 		<script>
 			$(function() {
 			    $('a[href*=#]:not([href=#])').click(function() {
@@ -34,7 +37,7 @@
 	<body>
 		<div id="topBar">
 			<a href="#home">
-				Gary Chi <br /><!--<span id="topBot">comp sci</span>-->
+				Gary Chi <br /><!--<span id="topBot">computer scientist</span>-->
 			</a>
 		</div>
 		<div id="navigation">
@@ -42,6 +45,21 @@
 			<a href="#resume">resume</a> &nbsp
 			<a href="#projects">projects</a> &nbsp
 			<a href="#contact">contact</a>
+		</div>
+		<svg id="burger" width="40" height="40" viewBox="0 0 100 100">
+			<g stroke-width="12">   
+				<line x1="6" y1="6" x2="80" y2="6"></line>
+				<line x1="6" y1="28" x2="80" y2="28"></line>
+				<line x1="6" y1="50" x2="80" y2="50"> </line>
+			</g>
+		</svg>
+		<svg id="close" width="40" height="40" viewBox="0 0 100 100">
+			<g stroke-width="12">   
+				<line x1="42" y1="6" x2="42" y2="80"></line>
+				<line x1="6" y1="42" x2="80" y2="42"></line>
+			</g>
+		</svg>
+		<div id="mMenu">
 		</div>
 		<div id="home" class="content contentA">
 			<a href="#about">
@@ -119,9 +137,11 @@
 					<div class="more box" id="skillsMore">more</div>
 				</div>
 				<div id="toolsCont" class="resCont">
-					<div id="toolA" class="box">Software</div>
-					<div id="toolB" class="box">IDE</div>
-					<div id="toolB" class="box">OS</div>
+					<div id="toolA" class="box">Git</div>
+					<div id="toolB" class="box">Adobe</div>
+					<div id="toolC" class="box">Atom</div>
+					<div id="toolD" class="box">VS</div>
+					<div id="toolE" class="box">OS</div>
 					<div class="more box" id="toolsMore">more</div>
 				</div>
 				<div id="expCont" class="resCont">
@@ -129,6 +149,8 @@
 					<div id="expB" class="box">FindU</div>
 					<div class="more box" id="expMore">more</div>
 				</div>
+			</div>
+			<div id="resumeCanvas" class="aniR">
 			</div>
 		</div>
 		<div id="projects" class="content contentB">
@@ -152,9 +174,9 @@
 				<h2>Current Projects</h2>
 				<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a href="https://github.com/gbeargary">click here</a>.
 				</p>
+				<div id="projContainer">
+				</div>
 			</div>
-			<!--<div id="projContainer">
-			</div>-->
 		</div>
 		<div id="contact" class="content contentA">
 			<a href="#projects">

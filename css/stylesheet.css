@@ -41,7 +41,7 @@ a:hover {
 	right: 2em;
 	font: 1.5em 'Catamaran', calibri, sans-serif, tahoma;
 	letter-spacing: -1px;
-	z-index: 20;
+	z-index: 10;
 }
 #navigation > a {
 	color: #A0A0A0;
@@ -166,4 +166,43 @@ input, textarea {
 @-webkit-keyframes backward {
     0% {right:-10%;}
     100% {right:10%;}
+}
+
+/*Mobile*/
+#burger, #close {
+	position: fixed;
+	top: 3.5em;
+	cursor: pointer;
+	z-index: 10;
+}
+#burger {
+	right: 3em;
+}
+#close {
+	transform:rotate(45deg);
+	right: 3em;
+	display: none;
+}
+#burger g, #close g {
+    stroke: #A0A0A0;
+    transition: stroke 0.25s ease-in-out;    
+}
+#burger:hover g, #close:hover g {
+    stroke: gray;
+}
+#mMenu {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #EFEFEF;
+	display: none;
+	z-index: 1;
+}
+@media (max-width:44em){
+	#navigation { display: none; }
+	#burger { display: block;}
+}
+@media (min-width:44em) {
+	#navigation { display: block; }
+	#burger { display: none; }
 }
