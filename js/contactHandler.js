@@ -28,6 +28,8 @@ function handleFormSubmit(event) {
         //console.log(xhr.responseText);
         document.getElementById('divForm').style.display = 'none'; // hide form
         document.getElementById('divFormSent').style.display = 'block';
+		document.getElementById('question').style.display = 'none';
+		document.getElementById('check').style.display = 'block';
         return;
     };
     // url encode form data for sending as post data
