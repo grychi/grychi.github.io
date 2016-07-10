@@ -211,8 +211,10 @@ input, textarea {
 @media (max-width:90vh){
 	#navigation { display: none; }
 	#burger { display: block;}
+	.button { display: none; }
 }
 @media (min-width:90vh) {
 	#navigation { display: block; }
 	#burger { display: none; }
+	.button { display:block; }
 }
