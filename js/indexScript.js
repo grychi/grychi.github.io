@@ -1,4 +1,4 @@
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function () {
 	
 	var mountColors = [['#384C65','#1A6570'],['#38557D','#1D6E8B'],['#22367D','#11468A'],['#21A774','#0EBAA0']];
 	var useColor;
