@@ -110,3 +110,14 @@
 	vertical-align: middle;
 	line-height: 10vh;
 }
+
+input, textarea {
+    padding: 1vh;
+    border: none;
+	font: .8em 'Catamaran', calibri, sans-serif, tahoma;
+	margin: 1vh;
+}
+textarea {
+	width: 100%;
+	height: 15vh;
+}

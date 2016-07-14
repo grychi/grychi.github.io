@@ -26,13 +26,13 @@ a:hover {
 }
 #topBar > a {
     font: 2.2em 'Catamaran', calibri, sans-serif, tahoma;
-    letter-spacing: -2px;
+    letter-spacing: -0.06em;
     line-height: 0;
     color: black;
 }
 #topBot {
 	font: .5em 'Catamaran', calibri, sans-serif, tahoma;
-	letter-spacing: 0px;
+	letter-spacing: 0;
 	color: gray;
 }
 #navigation {
@@ -40,7 +40,7 @@ a:hover {
 	top: 2em;
 	right: 2em;
 	font: 1.5em 'Catamaran', calibri, sans-serif, tahoma;
-	letter-spacing: -1px;
+	letter-spacing: -0.03em;
 	z-index: 10;
 }
 #navigation > a {
@@ -77,7 +77,7 @@ p > a:hover {
     z-index: 1;
 	color: gray;
     background-color: white;
-    border-radius: 4px;
+    border-radius: 0.5em;
     text-align: center;
 	line-height: 125%;
 }
@@ -102,18 +102,12 @@ span.arrows {
     -o-transform: scale(1, 2);
     vertical-align: middle;
 }
-input, textarea {
-    padding: 10px;
-    border: none;
-	font: .8em 'Catamaran', calibri, sans-serif, tahoma;
-	margin: 1vh;
-}
 
 /*Content Animation*/
 .aniDivL, .aniDivR {
 	top: 20vh;
 	width: 40%;
-	position: relative;
+	position: absolute;
 	background: transparent;
 }
 .aniDivL {
@@ -132,7 +126,7 @@ input, textarea {
 }
 .aniL, .aniR {
 	top: 20vh;
-	position: relative;
+	position: absolute;
 	background: transparent;
 }
 .aniL {

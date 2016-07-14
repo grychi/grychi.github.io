@@ -1,8 +1,9 @@
-<!--Gary Chi-->
 <!DOCTYPE HTML>
+<!--Gary Chi-->
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=600" />
 		<title>Gary Chi</title>
 		<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
 		<link href="css/canvas.css" type="text/css" rel="stylesheet" />
@@ -12,7 +13,6 @@
 		<link href="css/contact.css" type="text/css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="js/canvasScript.js"></script>
 		<script type="text/javascript" src="js/indexScript.js"></script>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<script>
@@ -44,15 +44,16 @@
 			<a href="#projects">projects</a> &nbsp
 			<a href="#contact">contact</a>
 		</div>
+		<!--Should experiment with HTML canvas-->
 		<svg id="burger" width="60" height="60" viewBox="0 0 100 100">
-			<g stroke-width="12">   
+			<g stroke-width="12">
 				<line x1="6" y1="6" x2="80" y2="6"></line>
 				<line x1="6" y1="28" x2="80" y2="28"></line>
 				<line x1="6" y1="50" x2="80" y2="50"> </line>
 			</g>
 		</svg>
 		<svg id="close" width="60" height="60" viewBox="0 0 100 100">
-			<g stroke-width="12">   
+			<g stroke-width="12">
 				<line x1="42" y1="6" x2="42" y2="80"></line>
 				<line x1="6" y1="42" x2="80" y2="42"></line>
 			</g>
@@ -96,7 +97,7 @@
 			<div class="aniDivL">
 				<h2>About Me</h2>
 				<p>
-					I may present myself as a front-end web developer, but I am also interested in all of technology. I admittedly spend a lot of my time in front of a screen because one of my passions is coding. Many of the programming languages I know are self-taught through reading documentations and practice. I am currently a rising sophomore studying at New York University (Tandon School of Engineering). I major in computer science where I can expand my technological knowledge. Other times when I'm not coding, I will often draw or design things such as this website, so consider me a graphic designer as well. I seek to be inspired and to work hard doing things I enjoy.
+					I am a programmer. I have a deep interest in technology where my curiosity leads to my inclination to tinker with computers. I admittedly spend a lot of my time in front of a screen because I am a passionate coder. Many of the programming languages I know are self-taught through reading documentations and practice. I am currently a rising sophomore studying at New York University (Tandon School of Engineering) majoring in computer science. I often experiement and create using what I come to understand. More simply, I seek to learn, to be inspired, and to work hard doing things I enjoy.
 				</p>
 			</div>
 			<div id="aboutCanvas" class="aniR">
@@ -127,17 +128,41 @@
 			</a>
 			<div class="aniDivL">
 				<h2>The Details</h2>
-				<p>
-					Here are my skills and experience at a glance. If you're interested in more than just the brief descriptions, feel free to <a href="#contact">contact me</a>. I can provide a detailed resume.
-					<br><br><span style="font-size: 1.2em;"><a id="skills" href="#resume">skills</a> &nbsp <a id="tools" href="#resume">tools</a> &nbsp <a id="exp" href="#resume">experience</a></span>
-				</p>
+				<div id="resChange">
+					<p>Here are my skills and experience at a glance. If you're interested in more than just the brief descriptions, feel free to <a href="#contact">contact me</a>. I can provide a detailed resume or any additional information.</p><br>
+					<p>Click on a category to see an overview. Then, click on an item to see a brief description.</p>
+				</div>
+			</div>
+			<div id="resumeCanvas" class="aniR">
+				<div id="resNav" style="font-size: 1.2em;">
+					<a id="skills" href="#resume">skills</a> &nbsp 
+					<a id="tools" href="#resume">tools</a> &nbsp 
+					<a id="exp" href="#resume">experience</a> &nbsp 
+					<a id="bonus" href="#resume">bonus</a>
+				</div>
+				<!--Should rewrite into jQuery soon to automatically generate and efficiently update items.-->
+				<div id="defaultCont" class="resCont" style="display: block;">
+					<div id="defA" class="box"></div>
+					<div id="defB" class="box"></div>
+					<div id="defC" class="box"></div>
+					<div id="defD" class="box"></div>
+					<div id="defE" class="box"></div>
+					<div id="defF" class="box"></div>					
+				</div>
 				<div id="skillsCont" class="resCont">
 					<div id="skillA" class="box">HTML</div>
 					<div id="skillB" class="box">CSS</div>
 					<div id="skillC" class="box">JS</div>
 					<div id="skillD" class="box">C++</div>
 					<div id="skillE" class="box">Java</div>
-					<div class="more box" id="skillsMore">more</div>
+					<span id="skillsHide" style="display: none;">
+						<div id="skillF" class="box">Python</div>
+						<div id="skillG" class="box">AS</div>
+						<div id="skillH" class="box">SQL</div>
+						<div id="skillI" class="box">PHP</div>
+						<div id="skillJ" class="box">Ruby</div>
+					</span>
+					<div class="more box" id="skillsMore">+</div>
 				</div>
 				<div id="toolsCont" class="resCont">
 					<div id="toolA" class="box">Git</div>
@@ -145,15 +170,23 @@
 					<div id="toolC" class="box">Atom</div>
 					<div id="toolD" class="box">VS</div>
 					<div id="toolE" class="box">OS</div>
-					<div class="more box" id="toolsMore">more</div>
+					<span id="toolsHide" style="display: none;">
+						<div id="toolF" class="box">Office</div>
+						<div id="toolG" class="box">GIMP</div>
+						<div id="toolH" class="box">Android</div>
+					</span>
+					<div class="more box" id="toolsMore">+</div>
 				</div>
 				<div id="expCont" class="resCont">
 					<div id="expA" class="box">NYU</div>
 					<div id="expB" class="box">FindU</div>
-					<div class="more box" id="expMore">more</div>
+					<div class="more box" id="expMore">?</div>
 				</div>
-			</div>
-			<div id="resumeCanvas" class="aniR">
+				<div id="bonusCont" class="resCont">
+					<div id="bonusA" class="box">Art</div>
+					<div id="bonusB" class="box">Music</div>
+					<div id="bonusC" class="box">EE</div>
+				</div>
 			</div>
 		</div>
 		<div id="projects" class="content contentB">
@@ -175,7 +208,7 @@
 			</a>
 			<div class="aniDivL">
 				<h2>Current Projects</h2>
-				<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a href="https://github.com/gbeargary">click here</a>.
+				<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my github, <a href="https://github.com/therealgary">click here</a>.
 				</p>
 				<div id="projContainer">
 				</div>
@@ -192,18 +225,16 @@
 			</a>
 			<div id="divForm" class="aniDivL">
 				<h2>Contact Me</h2>
-				<p>
-					If you're interested to get in touch, go ahead and send an e-mail to <a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>. <br> Or you can fill out the form below. <br>
+				<p>If you're interested to get in touch, go ahead and send an e-mail to <a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>. <br> Or you can fill out the form below.<br></p>
 				<form id="cForm" method="POST" action="https://script.google.com/macros/s/AKfycbyMGSBHVxAGoKPhXVBb6D4DEab2ZvHABnrpFjsgfpN-0hxgdFq2/exec">
 					<input type="text" name="cName" placeholder="Name" maxlength="35">
 					<br>
 					<input type="email" name="cEmail" placeholder="E-mail" maxlength="45">
 					<br>
-					<textarea name="cMessage" placeholder="What do you have in mind?" cols="80" rows="10"></textarea>
+					<textarea name="cMessage" placeholder="What do you have in mind?"></textarea>
 					<br>
 					<input type="submit" value="submit" style="min-width: 8em; width: 10vw">
 				</form>
-				</p>
 			</div>
 			<div id="divFormSent" class="aniDivL" style="display:none;" >
 				<h2>Thanks</h2>

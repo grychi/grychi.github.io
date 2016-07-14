@@ -23,7 +23,7 @@
 	top: 6vh;
 	width: 14vh;
 	height: 15vh;
-	background: #FFF9E0;
+	background: #FFECB3;
 	border-radius:20% 120% 100% 100%/100% 30% 125% 125%;
 }
 #person:before {
@@ -37,16 +37,16 @@
 	content:'';
 	position: absolute;
 	top: 20vh;
-	width: 4vh;
+	width: 5vh;
 	height: 16vh;
-	background: #FFF9E0;
+	background: #FFECB3;
 }
 #arms:after {
 	left: 12vh;
 	transform: rotate(-8deg);
 }
 #arms:before {
-	left: -10vh;
+	left: -11vh;
 	transform: rotate(8deg);
 }
 #table {
@@ -64,14 +64,14 @@
 	height: 3vh;
 	width: 5vh;
 	top: -200%;
-	background: #F7F1D9;
+	background: #FFE082;
 }
 #table:after {
-	left: 10%;
+	left: 8%;
 	border-radius: 100% 40% 0% 0%/100% 100% 0% 0%;
 }
 #table:before {
-	left: 68%;
+	left: 70%;
 	border-radius: 40% 100% 0% 0%/100% 100% 0% 0%;
 }
 #screen {
