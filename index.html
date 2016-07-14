@@ -15,22 +15,10 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1"></script>
 		<!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
 		<script type="text/javascript" src="js/indexScript.js"></script>
+		<script type="text/javascript" src="js/resumeScript.js"></script>
 		<link rel="shortcut icon" href="favicon.ico" />
 		<script>
-			$(function() {
-			    $('a[href*=#]:not([href=#])').click(function() {
-			     	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			     	  var target = $(this.hash);
-			     	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			     	  if (target.length) {
-			     		$('html,body').animate({
-			     		  scrollTop: target.offset().top
-			     		}, 1000);
-						return false;
-			     	  }
-			     	}
-			    });
-			});
+			$(function(){$(document).on("click","a[href*=#]:not([href=#])",function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var t=$(this.hash);if(t=t.length?t:$("[name="+this.hash.slice(1)+"]"),t.length)return $("html,body").animate({scrollTop:t.offset().top},1e3),!1}})});
 		</script>
 	</head>
 	<body>
