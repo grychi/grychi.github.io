@@ -20,8 +20,18 @@
 		<script>
 			$(function(){$(document).on("click","a[href*=#]:not([href=#])",function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var t=$(this.hash);if(t=t.length?t:$("[name="+this.hash.slice(1)+"]"),t.length)return $("html,body").animate({scrollTop:t.offset().top},1e3),!1}})});
 		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded",function(){window.jQuery||(document.querySelector("#warning").style.display="block")});
+		</script>
 	</head>
 	<body>
+		<div id="warning" style="display:none; position:fixed; bottom:4em; width:100%; background:transparent; z-index:5; text-align:center;">
+			<a href="javascript:location.reload(true);">
+				<div style="display:inline-block; height:3em; margin:auto; background: #E91E63; border-radius: 1em; line-height:1em; color:white;">
+					<p style="display:inline-block; margin:1em;">Whoops, something went wrong. Please refresh the page.</p>
+				</div>
+			</a>
+		</div>
 		<div id="topBar">
 			<a href="#home">
 				Gary Chi <br /><!--<span id="topBot">computer scientist</span>-->
