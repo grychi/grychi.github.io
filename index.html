@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<!--Gary Chi-->
+<!--© 2016, Gary Chi-->
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -44,7 +44,7 @@
 			<a href="#projects">projects</a> &nbsp
 			<a href="#contact">contact</a>
 		</div>
-		<!--Should experiment with HTML canvas-->
+		<!--Should try to replace with HTML canvas-->
 		<svg id="burger" width="60" height="60" viewBox="0 0 100 100">
 			<g stroke-width="12">
 				<line x1="6" y1="6" x2="80" y2="6"></line>
@@ -128,7 +128,7 @@
 					<a id="exp" href="#resume">experience</a> &nbsp
 					<a id="bonus" href="#resume">bonus</a>
 				</div>
-				<!--Should rewrite into jQuery soon to automatically generate and efficiently update items.-->
+				<!--Should use JS to automatically generate and efficiently update items.-->
 				<div id="defaultCont" class="resCont" style="display: block;">
 					<div id="defA" class="box"></div>
 					<div id="defB" class="box"></div>
@@ -193,8 +193,19 @@
 			</a>
 			<div class="aniDivL">
 				<h2>Current Projects</h2>
-				<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing the full project, please <a href="#contact">contact me</a>. Also, if you're curious to see my GitHub, <a href="https://github.com/therealgary">click here</a>.</p>
-				<div id="projContainer"></div>
+				<div id="projChange">
+					<p>Here are details about some of the projects I'm currently working on. If you're interested in seeing any of these projects, <a href="#contact">let me know</a>. I would be pleased to show you my progress. If you want to see things I've made in the past, <a href="">here is an archive</a>. Also, if you're curious to see my GitHub, <a href="https://github.com/therealgary">click here</a>.</p><br><p>Click on an image to see its project description.</p>
+				</div>
+			</div>
+			<!--Will reformat and group sets of picture for each project-->
+			<div id="projContainer" class="aniR">
+				<div id="bgPic"></div>
+				<div id="spA" class="smPic" style="background-image:url(img/pgr0.png); background-size: 100% 100%;"></div>
+				<div id="spB" class="smPic" style="background-image:url(img/pgr1.png); background-size: 100% 100%;"></div>
+				<div id="spC" class="smPic" style="background-image:url(img/pgr2.png); background-size: 100% 100%;"></div>
+				<div id="spD" class="smPic" style="background-image:url(img/pgr3.png); background-size: 100% 100%;"></div>
+				<div id="spE" class="smPic" style="background-image:url(img/web0.png); background-size: 100% 100%;"></div>
+				<div id="spF" class="smPic" style="background-image:url(img/web2.png); background-size: 100% 100%;"></div>
 			</div>
 		</div>
 		<div id="contact" class="content contentA">
@@ -235,6 +246,6 @@
 			</div>
 		</div>
 		<div style="position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 1.5vh; line-height: 3vh;">© 2016, Gary Chi</div>
-		<script data-cfasync="false" type="text/javascript" src="js/contactHandler.js"></script>
+		<script type="text/javascript" src="js/contactHandler.js"></script>
 	</body>
 </html>
