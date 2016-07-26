@@ -21,6 +21,12 @@ SQL	|:star::star::star:
 PHP	|:star::star::star:
 Ruby	|:star::star::star:
 
+#### NYU
+The courses I take at NYU helps further my understanding in computer science. I have finished taking Data Structures and Algorithms course and I have a fair understanding of time and space complexity. I will be taking Computer Architecture and Organization this upcoming semester.
+
+#### FindU
+FindU is a small startup that was founded in 2014. It was meant to be a platform to help students develop and realize their individuality, leading to their careers. While working with their team, I was responsible for the majority of front-end web development along with some back-end work.
+
 ## Current Projects
 #### Pokemon GR
 This is a personal fangame that I am making using ActionScript3.0. Pokemon GR is an adventure/arena game where two players explore while battling other Pokemon. So far for this project, most of the backend systems such as movement, attacking and dialogue, are implemented. I have also finished most of the graphics required for the game. However, this is a long project and there is still a great number of details that need to be worked.
