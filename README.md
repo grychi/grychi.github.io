@@ -10,16 +10,16 @@ I am a programmer with a deep interest in technology. My curiosity leads to my i
 Here are my skills and experience at a glance. If you're interested in more than just the brief descriptions shown here, feel free to contact me. I can also provide my resume and any supplementary information.
 
 Skill | Mastery
---- | :---:
-HTML/CSS	|xxxxo
-JavaScript	|xxxxo
-C++	|xxxxx
-Java	|xxxxo
-Python	|xxxxo
-ActionScript	|xxxxo
-SQL	|xxxoo
-PHP	|xxxoo
-Ruby	|xxxoo
+--- | :---
+HTML/CSS	|:star::star::star::star:
+JavaScript	|:star::star::star::star:
+C++	|:star::star::star::star::star:
+Java	|:star::star::star::star:
+Python	|:star::star::star::star:
+ActionScript	|:star::star::star::star:
+SQL	|:star::star::star:
+PHP	|:star::star::star:
+Ruby	|:star::star::star:
 
 ## Current Projects
 #### Pokemon GR
