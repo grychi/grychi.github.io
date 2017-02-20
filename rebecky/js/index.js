@@ -45,10 +45,8 @@ $('document').ready(function () {
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             $(".transform-transition").addClass("transform-active");
-            console.log("down");
         } else {
             $(".transform-transition").removeClass("transform-active");
-            console.log("up");
         }
         lastScrollTop = st;
     });
