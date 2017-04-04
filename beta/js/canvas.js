@@ -32,6 +32,7 @@ var dw = 0;
 var dm, ts, lastMX, lastMY;
 
 var welStr = "welcome";
+var showStr = "";
 var cycled = false;
 var imgCycle = 0;
 
@@ -348,21 +349,21 @@ function draw() {
   ctx.fillStyle = pickColor + "," + colorOp + ")";
   ctx.fillRect(0, 0, canvasW, canvasH);
 
-  var showStr = "i am gary chi";
+  showStr = "gary chi";
   if (dx > 10) {
     showImg();
     switch (imgCycle) {
       case 0:
-        showStr = "I am imaginative";
+        showStr = "imaginative";
         break;
       case 1:
-        showStr = "I am analytical";
+        showStr = "analytical";
         break;
       case 2:
-        showStr = "I am artistic";
+        showStr = "artistic";
         break;
       case 3:
-        showStr = "I am passionate";
+        showStr = "passionate";
         break;
     }
   }
@@ -450,13 +451,7 @@ function mouseS() {
 function animateG() {
   if (ani) {
     cycled = false;
-    if (dm > 1000) {
-      dx += 8;
-    }
-    else if (dm > 100) {
-      dx += 4;
-    }
-    else if (dm > 20) {
+    if (dm > 40) {
       dx += 2;
     }
     else {
@@ -474,7 +469,7 @@ function animateG() {
       cycled = !cycled;
     }
   }
-  offset = 50 * Math.log(Math.sqrt(Math.sqrt(dx)));
+  offset = 0.05 * canvasH * Math.log(Math.sqrt(Math.sqrt(dx)));
   dw += 1 / 10;
   dw %= 360;
   draw();
@@ -513,3 +508,22 @@ document.addEventListener("DOMContentLoaded", function () {
   draw();
   animateG();
 });
+
+function changeStr(a) {
+  if (showStr.length > a.length) {
+
+  }
+  else if (showStr.length < a.length) {
+    showStr += randLetter();
+  }
+}
+function waitStr() {
+
+}
+function replaceLetter(a, b) {
+  showStr = showStr.substr(0, b) + a + showStr.substr(b, showStr.length);
+}
+function randLetter() {
+  var potential = "abcdefghijklmnopqrstuvwxyz";
+  return potential.charAt(Math.floor(Math.random() * potential.length));
+}
