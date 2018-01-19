@@ -1,7 +1,7 @@
 @charset "utf-8";
 * {
-    -webkit-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     font-family: 'Catamaran', calibri;
 }
 body {
@@ -10,6 +10,17 @@ body {
 }
 a {
     text-decoration: none;
+}
+.nav-icons {
+    color: white;
+    margin: 0.5em;
+}
+.nav-icons i {
+    font-size: 2em;
+    opacity: 0.8;
+}
+.nav-icons i:hover {
+    opacity: 1;
 }
 .content {
     position: relative;
@@ -35,10 +46,10 @@ a {
     cursor: pointer;
 }
 #home {
-    background-image: url('../img/bgGray.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
+    background-color: #263238;
 }
