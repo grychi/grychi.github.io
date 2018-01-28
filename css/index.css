@@ -1,55 +1,19 @@
 @charset "utf-8";
 * {
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    font-family: 'Catamaran', calibri;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
-a {
-    text-decoration: none;
+    -webkit-transition: all 0.5s;
 }
 .nav-icons {
     color: white;
-    margin: 0.5em;
+    margin: 0.2em;
 }
 .nav-icons i {
-    font-size: 2em;
     opacity: 0.8;
 }
 .nav-icons i:hover {
     opacity: 1;
 }
-.content {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    background-color: #EFEFEF;
-}
-.content:nth-child(even) {
-    background-color: #F2F2F2;
-}
-#canTop {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    min-width: 20em;
-    width: 100%;
-    text-align: center;
-    transform: translate(-50%, 0);
-}
-#canTop svg {
-    margin: 1em;
-    cursor: pointer;
-}
 #home {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
-    background-color: #263238;
+    background-color: #455A64;
 }
