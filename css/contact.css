@@ -5,7 +5,6 @@
     border-radius: 2vh;
     position: relative;
     margin: 2em auto;
-    top: -1vh;
 }
 #mouth,#smiley {
     position: absolute;
@@ -17,8 +16,6 @@
     border-radius: 100%
 }
 #contactCanvas {
-    /* height: 40vh; */
-    /* width: 10vh; */
     background: 0 0;
 }
 #chatBubB {
@@ -28,7 +25,6 @@
 #chatBubW {
     background: #CFD8DC;
     right: 5vh;
-    top: -2vh;
 }
 #chatBubB:after,#chatBubW:after {
     content: '';
@@ -42,14 +38,12 @@
     border-top: 4vh solid #03A9F4;
     border-left: 4vh solid transparent;
 }
-
 #chatBubW:after {
     left: 4vh;
     top: 18vh;
     border-top: 4vh solid #CFD8DC;
     border-right: 4vh solid transparent;
 }
-
 #smiley {
     width: 8vh;
     height: 8vh;
@@ -58,11 +52,9 @@
     padding: 2vh;
     background: #FFEB3B;
 }
-
 #mouth,.eye {
     background: #455A64;
 }
-
 #mouth {
     width: 60%;
     height: 30%;
@@ -71,12 +63,10 @@
     margin-left: -30%;
     border-radius: 0 0 8vh 8vh
 }
-
 .eyes {
     width: 100%;
     margin-top: 10%
 }
-
 .eye {
     width: 1.5vh;
     height: 2vh;
