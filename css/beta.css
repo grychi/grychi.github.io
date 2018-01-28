@@ -30,6 +30,11 @@ a {
 .orientB {
     float: left;
 }
+.mainContBody {
+    padding: 2em;
+    max-width: 40em;
+    float: right;
+}
 
 .gg-phone-gone {
     display: none;

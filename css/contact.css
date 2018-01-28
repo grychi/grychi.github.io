@@ -116,4 +116,5 @@ input,textarea {
 textarea {
     width: calc(100% - 3em);
     height: 15vh;
+    resize: none;
 }
