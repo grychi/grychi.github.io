@@ -4,7 +4,7 @@
     width: 30vh;
     border-radius: 2vh;
     position: relative;
-    margin: 2em auto;
+    margin: 4vh auto;
 }
 #mouth,#smiley {
     position: absolute;
@@ -14,9 +14,6 @@
 }
 #smiley,.eye {
     border-radius: 100%
-}
-#contactCanvas {
-    background: 0 0;
 }
 #chatBubB {
     background: #03A9F4;
@@ -81,7 +78,7 @@
     top: 15%;
     border-radius: 100%;
     padding: 2vh;
-    font-size: 6em;
+    font-size: 12vh;
     font-weight: bold;
     text-align: center;
     line-height: 0.8;
@@ -98,13 +95,30 @@
     color: white;
 }
 input,textarea {
-    padding: 1vh;
+    padding: 0.5em;
     border: none;
-    font: .8em Catamaran,calibri;
-    margin: 1vh
+    font: 1em Catamaran;
+    margin: 0.5em 1em 0.5em 0;
+    border-radius: 0.5em;
+    outline-color: #00BCD4;
 }
 textarea {
-    width: calc(100% - 3em);
+    width: calc(100% - 2em);
     height: 15vh;
     resize: none;
+}
+
+input {
+    width: calc(50% - 2.15em);
+}
+#formSub {
+    min-width: 8em;
+    width: 10vw;
+    background: white;
+    color: #03A9F4;
+}
+#formSub:hover {
+    background: #03A9F4;
+    color: white;
+    font-weight: bold;
 }

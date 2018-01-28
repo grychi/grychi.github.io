@@ -22,17 +22,17 @@ var tellOut = [
 ];
 var manual = {
     "about": "Shows the section with a description about me and what I do.",
-    "cat": ['Concatenate function to standard output. Example:',
+    "cat": ['Concatenates function to standard output. Example:',
         '"cat hello" outputs the function source code for "hello"'],
     "contact": "Shows the section with a form to contact me.",
     "clear": "Clears the current terminal display.",
     "date": "Outputs the current date provided by JavaScript.",
     "details": "Shows the section with details of my skills.",
-    "echo": ['Echo just repeats user input. For example:',
-        '"echo testing function" outputs "testing function"'],
+    "echo": ['Outputs the user input. For example:',
+        '"echo just saying hi" outputs "just saying hi"'],
     "hello": "How are you?",
     "help": "Provides a quick summary of this terminal.",
-    "ls": "List all available commands of this terminal.",
+    "ls": "Lists all available commands of this terminal.",
     "man": "Outputs a general description of how to use this terminal.",
     "mk": ['Adds a new command to use for the current session.',
         'Usage: "mk myCommand display(23*27)"',
@@ -90,7 +90,7 @@ var commands = {
             'The general use is just entering a command followed by parameters.',
             'For example, enter "all" to list available commands.',
             'Apply the proper parameters as specified from "--help".',
-            'For example, use "mk --help" to see parameter description for "mk".',
+            'For example, enter "mk --help" to see parameter description for "mk".',
             'You can use "&&" to execute multiple commands.',
             'Piping commands is unavailable. Basic arithmetic is possible.',
             'Try playing around with this yourself. Enjoy.']
@@ -160,7 +160,7 @@ function interpret(a) {
                 }
                 tmpArgs = [];
             }
-            else {
+            else if (b[i] != "") {
                 tmpArgs.push(b[i]);
             }
         }

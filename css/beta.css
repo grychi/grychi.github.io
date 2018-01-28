@@ -4,7 +4,8 @@ body {
     padding: 0;
 }
 a {
-    text-decoration: none
+    color: #03A9F4;
+    text-decoration: none;
 }
 .content {
     background-color: #ECEFF1;
@@ -31,19 +32,19 @@ a {
     float: left;
 }
 .mainContBody {
-    padding: 2em;
+    padding: 1em;
     max-width: 40em;
-    float: right;
+    margin: auto;
 }
 
-.gg-phone-gone {
+.phoneGone {
     display: none;
 }
-.gg-tablet-gone {
+.tabletGone {
     display: none;
 }
 @media (min-width: 425px) {
-    .gg-phone-gone {
+    .phoneGone {
         display: block;
     }
 }
@@ -57,7 +58,10 @@ a {
     .sideCont {
         width: 40%;
     }
-    .gg-tablet-gone {
+    .mainContBody {
+        float: right;
+    }
+    .tabletGone {
         display: block;
     }
 }

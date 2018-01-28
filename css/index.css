@@ -17,3 +17,8 @@
     overflow: hidden;
     background-color: #455A64;
 }
+#homeLinks {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
