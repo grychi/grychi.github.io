@@ -16,13 +16,25 @@
 #home {
     color: white;
     overflow: hidden;
-    background-color: #455A64;
+    background-color: transparent;
 }
 #homeLinks {
     position: fixed;
-    top: 2em;
-    right: 2em;
+    font-size: 1em;
+    top: 1em;
+    right: 1em;
     z-index: 10;
+}
+#bgSlant {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    height: 6em;
+    width: calc(100% + 2em);
+    background-color: #546E7A;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 #quickView {
     margin: 2em;
@@ -33,9 +45,15 @@
     height: 8em;
     width: 8em;
     background-color: #ECEFF1;
-    margin: 2em auto;
+    margin: auto;
     border-radius: 50%;
 }
 #quickViewName {
     font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    #quickViewProfile {
+        margin-top: -2em;
+    }
 }

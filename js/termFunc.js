@@ -55,6 +55,7 @@ var commands = {
     },
     "contact": function () {
         scrollTo("contact");
+        display("");
     },
     "clear": function () {
         var t = document.getElementById("termBodyOutput");
