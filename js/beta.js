@@ -6,6 +6,9 @@ $(function () {
         }
     };
     $("#termPlace").load("terminal.html", function (e) {
+        currStr = "hello";
+        interpret("hello");
+        currStr = "";
         document.addEventListener("keypress", function (e) {
             if (e.keyCode == 13) { //enter
                 currStr = currStr.trim();

@@ -99,7 +99,7 @@ input,textarea {
     border: none;
     font: 1em Catamaran;
     margin: 0.5em 1em 0.5em 0;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     outline-color: #00BCD4;
 }
 textarea {

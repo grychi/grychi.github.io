@@ -14,11 +14,28 @@
     opacity: 1;
 }
 #home {
+    color: white;
     overflow: hidden;
     background-color: #455A64;
 }
 #homeLinks {
     position: fixed;
-    top: 1em;
-    right: 1em;
+    top: 2em;
+    right: 2em;
+    z-index: 10;
+}
+#quickView {
+    margin: 2em;
+    color: white;
+    text-align: center;
+}
+#quickViewProfile {
+    height: 8em;
+    width: 8em;
+    background-color: #ECEFF1;
+    margin: 2em auto;
+    border-radius: 50%;
+}
+#quickViewName {
+    font-weight: bold;
 }

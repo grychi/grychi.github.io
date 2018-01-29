@@ -35,7 +35,7 @@ var manual = {
     "ls": "Lists all available commands of this terminal.",
     "man": "Outputs a general description of how to use this terminal.",
     "mk": ['Adds a new command to use for the current session.',
-        'Usage: "mk myCommand display(23*27)"',
+        'For example, enter "mk myCommand 23*27".',
         'This creates the command "myCommand" to be used.',
         'Calling "myCommand" will then output "621".'],
     "secret": "Shhh",
@@ -48,6 +48,7 @@ var manual = {
 var commands = {
     "about": function () {
         scrollTo("about");
+        display("");
     },
     "cat": function (a) {
         display(commands[a]);
@@ -67,6 +68,7 @@ var commands = {
     },
     "details": function () {
         scrollTo("deets");
+        display("");
     },
     "echo": function () {
         display(arguments);
@@ -98,9 +100,11 @@ var commands = {
     },
     "mk": function (a, b) {
         commands[a] = function () { display(eval(b)); };
+        display("");
     },
     "secret": function () {
         //mini adventure game
+        display("");
     },
     "tell": function () {
         if (arguments.length == 0) {
@@ -116,6 +120,7 @@ var commands = {
     },
     "work": function () {
         scrollTo("work");
+        display("");
     }
 };
 
