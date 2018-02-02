@@ -1,4 +1,12 @@
 @charset "utf-8";
+html {
+    --writing: #00BCD4;
+    --bubble: #CFD8DC;
+}
+.contactActive {
+    --writing: #FFC107;
+    --bubble: white;
+}
 #chatBubB,#chatBubW {
     height: 18vh;
     width: 30vh;
@@ -13,21 +21,22 @@
     box-sizing: border-box
 }
 #smiley,.eye {
-    border-radius: 100%
+    border-radius: 50%
 }
 #chatBubB {
     background: #03A9F4;
     left: 5vh;
 }
 #chatBubW {
-    background: #CFD8DC;
+    background-color: var(--bubble);
     right: 5vh;
 }
 #chatBubB:after,#chatBubW:after {
     content: '';
     width: 0;
     height: 0;
-    position: absolute
+    position: absolute;
+    transition: all 0.5s;
 }
 #chatBubB:after {
     right: 4vh;
@@ -38,7 +47,7 @@
 #chatBubW:after {
     left: 4vh;
     top: 18vh;
-    border-top: 4vh solid #CFD8DC;
+    border-top: 4vh solid var(--bubble);
     border-right: 4vh solid transparent;
 }
 #smiley {
@@ -76,23 +85,25 @@
     position: absolute;
     left: 30%;
     top: 15%;
-    border-radius: 100%;
+    border-radius: 50%;
     padding: 2vh;
-    font-size: 12vh;
-    font-weight: bold;
-    text-align: center;
-    line-height: 0.8;
 }
 .eye:nth-of-type(2) {
     float: right
 }
 #question {
-    background: #00BCD4;
     color: white;
+    background-color: var(--writing);
 }
 #check {
-    background: #4CAF50;
+    background-color: #4CAF50;
     color: white;
+}
+#question i, #check i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12vh;
 }
 input,textarea {
     padding: 0.5em;

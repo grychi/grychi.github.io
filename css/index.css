@@ -1,27 +1,58 @@
 @charset "utf-8";
+html {
+    --topcolor: #ECEFF1;
+}
 * {
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
-.nav-icons {
-    color: white;
-    margin: 0.2em;
+.invert {
+    --topcolor: black;
 }
 .nav-icons i {
+    color: var(--topcolor);
+    font-size: 2em;
     opacity: 0.8;
+    margin: 0;
 }
 .nav-icons i:hover {
     opacity: 1;
+}
+#mobileMenuClose {
+    display: none;
+}
+#menu {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    max-width: 26em;
+    top: 0;
+    right: -100%;
+    z-index: -1;
+    background-color: #37474F;
+}
+.menu-icons i {
+	width: 1em;
+	color: white;
+	font-size: 2em;
+	display: block;
+	margin: 0.5em auto;
 }
 #home {
     color: white;
     overflow: hidden;
     background-color: transparent;
 }
+#homeCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
 #homeLinks {
     position: fixed;
     font-size: 1em;
-    top: 1em;
+    top: 2em;
     right: 1em;
     z-index: 10;
 }
@@ -31,10 +62,52 @@
     position: fixed;
     z-index: -1;
     height: 6em;
-    width: calc(100% + 2em);
-    background-color: #546E7A;
+    width: 100%;
+    background-color: #37474F;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+#logo {
+    position: fixed;
+    font-size: 2em;
+    top: 1em;
+    left: 0.5em;
+}
+#logoIco, #logoName {
+    float: left;
+}
+#logoName {
+    line-height: 1;
+    height: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--topcolor);
+    background-color: transparent;
+    z-index: 10;
+}
+#logoIco {
+    color: #ECEFF1;
+    background: #37474F;
+    line-height: 1;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.5em 0 0;
+    border-radius: 50%;
+    text-align: center;
+}
+#logoIco i {
+    font-size: 1em;
+}
+#logoName:hover {
+	background: var(--topcolor) -webkit-gradient(linear, left top, right top, from(#000), to(#000), color-stop(0.5, #fff)) 0 0 no-repeat;
+	background-image: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, #fff 48%, #fff 52%, transparent 54%, transparent 100%);
+	background-size: 50% 100%;
+    color: rgba(255, 255, 255, 0);
+    background-clip: text;
+	-webkit-background-clip: text;
+	animation-name: shine;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
 }
 #quickView {
     margin: 2em;
@@ -51,9 +124,39 @@
 #quickViewName {
     font-weight: bold;
 }
-
+#foot {
+    padding: 1em;
+    line-height: 2;
+    color: white;
+    background-color: #37474F;
+    text-align: center;
+}
 @media (min-width: 768px) {
     #quickViewProfile {
         margin-top: -2em;
     }
+    #logo {
+        left: 1em;
+    }
+    .nav-icons i {
+        font-size: 1.5em;
+        margin: 0 0.3em;
+    }
+}
+
+@keyframes shine {
+	0% {
+		background-position: -100%;
+	}
+	100% {
+		background-position: 300%;
+	}
+}
+@-webkit-keyframes shine {
+	0% {
+		background-position: -100%;
+	}
+	100% {
+		background-position: 300%;
+	}
 }

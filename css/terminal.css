@@ -78,6 +78,16 @@ body {
 	left: 0;
 	margin: 0 0.5em;
 }
+.termShow {
+	transition: none;
+	opacity: 1;
+	z-index: unset;
+}
+.termHide {
+	transition: all 1s;
+    opacity: 0;
+    z-index: -1;
+}
 #blinky {
 	float: left;
 	-webkit-animation: 1s blink step-end infinite;

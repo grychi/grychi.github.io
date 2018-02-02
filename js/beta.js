@@ -14,6 +14,14 @@ $(function () {
             else {
                 document.body.classList.remove("bodyEven");
             }
+            var h = document.getElementById("home");
+            var l = document.getElementById("logo");
+            if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
+                document.body.classList.add("invert");
+            }
+            else {
+                document.body.classList.remove("invert");
+            }
         }
         currStr = "Gary Chi";
         var gDesc = ['Software Developer',
@@ -46,19 +54,38 @@ $(function () {
             }
         });
         document.getElementById("termHeadNavClose").addEventListener("click", function (e) {
-            interpret("clear");
-            currStr = "";
+            document.getElementById("terminal").classList.add("termHide");
         })
     })
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
         var target = this.hash;
-        var $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        });
+        scrollTo(target);
+    });
+    document.addEventListener("keyup", function (e) {
+        if (document.getElementById("writing").value != "") {
+            document.getElementById("helper").textContent = "lightbulb_outline";
+            document.body.classList.add("contactActive");
+        }
+        else {
+            document.getElementById("helper").textContent = "help";
+            document.body.classList.remove("contactActive");
+        }
+    });
+    document.getElementById("mobileMenu").addEventListener("click", function (e) {
+        var menuMob = document.getElementById("menu");
+        var menuBurg = document.getElementById("mobileMenuBurger");
+        var menuClose = document.getElementById("mobileMenuClose");
+        if (menuBurg.style.display == "" || menuBurg.style.display == "block") {
+            menuBurg.style.display = "none";
+            menuClose.style.display = "block";
+            menuMob.style.right = 0;
+        }
+        else {
+            menuBurg.style.display = "block";
+            menuClose.style.display = "none";
+            menuMob.style.right = "-100%";
+        }
     });
 })
 
@@ -71,4 +98,18 @@ function updateTerm() {
 function isInView(el) {
     return (el.offsetTop + el.offsetHeight / 2 > window.pageYOffset &&
         el.offsetTop + el.offsetHeight / 2 < window.pageYOffset + window.innerHeight);
+}
+
+/*
+function scrollTo(a) {
+    document.getElementById(a).scrollIntoView({ behaviour: 'smooth' });
+}
+*/
+function scrollTo(a) {
+    var $target = $(a);
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+    }, 800, 'swing', function () {
+        window.location.hash = a;
+    });
 }

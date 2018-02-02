@@ -1,8 +1,11 @@
+html {
+    --links: #03A9F4;
+}
 body {
     font-family: Catamaran;
     margin: 0;
     padding: 0;
-    background-color: #607D8B;
+    background-color: #455A64;
 }
 .bodyEven {
     background-color: #FAFAFA;
@@ -11,7 +14,7 @@ body {
     background-color: #ECEFF1;
 }
 a {
-    color: #03A9F4;
+    color: var(--links);
     text-decoration: none;
 }
 .content {
@@ -42,6 +45,29 @@ a {
     padding: 1em;
     max-width: 40em;
     margin: auto;
+    line-height: 2;
+}
+.deetsHeader {
+    font-weight: bold;
+}
+#deets ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#deets li {
+    display: inline-block;
+    border: 2px solid var(--links);
+    background-color: white;
+    border-radius: 0.2em;
+    padding: 0 0.5em;
+    margin: 0.3em;
+    cursor: pointer;
+}
+#deets li:hover {
+    font-weight: bold;
+    background-color: var(--links);
+    color :white;
 }
 
 .phoneGone {
@@ -50,6 +76,12 @@ a {
 .tabletGone {
     display: none;
 }
+.phoneShow {
+    display: block;
+}
+.tabletShow {
+    display: block;
+}
 .shadows {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -57,6 +89,9 @@ a {
 @media (min-width: 425px) {
     .phoneGone {
         display: block;
+    }
+    .phoneShow {
+        display: none;
     }
 }
 @media (min-width: 768px) {
@@ -70,11 +105,17 @@ a {
     .sideCont {
         width: 40%;
     }
-    .mainContBody {
+    .orientA .mainContBody {
         float: right;
+    }
+    .orientB .mainContBody {
+        float: left;
     }
     .tabletGone {
         display: block;
+    }
+    .tabletShow {
+        display: none;
     }
 }
 

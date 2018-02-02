@@ -47,14 +47,14 @@ var manual = {
 }
 var commands = {
     "about": function () {
-        scrollTo("about");
+        scrollTo("#about");
         display("");
     },
     "cat": function (a) {
         display(commands[a]);
     },
     "contact": function () {
-        scrollTo("contact");
+        scrollTo("#contact");
         display("");
     },
     "clear": function () {
@@ -68,7 +68,7 @@ var commands = {
         display(d.toDateString());
     },
     "details": function () {
-        scrollTo("deets");
+        scrollTo("#deets");
         display("");
     },
     "echo": function () {
@@ -120,7 +120,7 @@ var commands = {
         display(d.toTimeString());
     },
     "work": function () {
-        scrollTo("work");
+        scrollTo("#work");
         display("");
     }
 };
@@ -178,6 +178,7 @@ function hasNum(a) {
 function display(a, b = " ") {
     var tmp = document.createElement("div");
     tmp.classList.add("termBodySection");
+    tmp.classList.add("noselect");
     tmp.textContent = currStr + '\r\n';
     if (typeof (a) != 'object') {
         tmp.textContent += a;
@@ -197,7 +198,4 @@ function display(a, b = " ") {
         tmp.textContent += tmpStr;
     }
     document.getElementById("termBodyOutput").appendChild(tmp);
-}
-function scrollTo(a) {
-    document.getElementById(a).scrollIntoView({ behaviour: 'smooth' });
 }
