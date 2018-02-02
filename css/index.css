@@ -84,6 +84,7 @@ html {
     color: var(--topcolor);
     background-color: transparent;
     z-index: 10;
+    transition: none;
 }
 #logoIco {
     color: #ECEFF1;
