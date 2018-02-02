@@ -1,4 +1,5 @@
 var currStr = "";
+var menuOpened = false;
 $(function () {
     window.onkeydown = function (e) {
         if (e.keyCode == 32 && e.target == document.body) {
@@ -16,11 +17,13 @@ $(function () {
             }
             var h = document.getElementById("home");
             var l = document.getElementById("logo");
-            if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
-                document.body.classList.add("invert");
-            }
-            else {
-                document.body.classList.remove("invert");
+            if (!menuOpened) {
+                if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
+                    document.body.classList.add("invert");
+                }
+                else {
+                    document.body.classList.remove("invert");
+                }
             }
         }
         currStr = "Gary Chi";
@@ -72,22 +75,32 @@ $(function () {
             document.body.classList.remove("contactActive");
         }
     });
-    document.getElementById("mobileMenu").addEventListener("click", function (e) {
-        var menuMob = document.getElementById("menu");
-        var menuBurg = document.getElementById("mobileMenuBurger");
-        var menuClose = document.getElementById("mobileMenuClose");
-        if (menuBurg.style.display == "" || menuBurg.style.display == "block") {
-            menuBurg.style.display = "none";
-            menuClose.style.display = "block";
-            menuMob.style.right = 0;
-        }
-        else {
-            menuBurg.style.display = "block";
-            menuClose.style.display = "none";
-            menuMob.style.right = "-100%";
-        }
-    });
+    document.getElementById("mobileMenu").addEventListener("click", toggleMenu);
+    // also toggle menu when pressing item
 })
+
+function toggleMenu() {
+    var menuMob = document.getElementById("menu");
+    var menuBurg = document.getElementById("mobileMenuBurger");
+    var menuClose = document.getElementById("mobileMenuClose");
+    if (menuBurg.style.display == "" || menuBurg.style.display == "block") {
+        menuBurg.style.display = "none";
+        menuClose.style.display = "block";
+        menuMob.style.right = 0;
+        document.body.classList.remove("invert");
+    }
+    else {
+        menuBurg.style.display = "block";
+        menuClose.style.display = "none";
+        menuMob.style.right = "-150%";
+        var h = document.getElementById("home");
+        var l = document.getElementById("logo");
+        if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
+            document.body.classList.add("invert");
+        }
+    }
+    menuOpened = !menuOpened;
+}
 
 function updateTerm() {
     document.getElementById("termBodyInput").textContent = currStr;

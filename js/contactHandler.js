@@ -23,6 +23,7 @@ function handleFormSubmit(event) {
     xhr.open('POST', url);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
+        document.body.classList.remove("contactActive");
         document.getElementById('divForm').style.display = 'none';
         document.getElementById('divFormSent').style.display = 'block';
         document.getElementById('question').style.display = 'none';
