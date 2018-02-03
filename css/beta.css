@@ -42,7 +42,7 @@ a {
     float: left;
 }
 .mainContBody {
-    padding: 1em;
+    padding: 2em;
     max-width: 40em;
     margin: auto;
     line-height: 2;
@@ -57,7 +57,7 @@ a {
 }
 #deets li {
     display: inline-block;
-    border: 2px solid var(--links);
+    border: 1px solid var(--links);
     background-color: white;
     border-radius: 0.2em;
     padding: 0 0.5em;

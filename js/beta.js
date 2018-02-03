@@ -20,9 +20,13 @@ $(function () {
             if (!menuOpened) {
                 if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
                     document.body.classList.add("invert");
+                    // document.getElementById("bgSlant").classList.remove("bgSlantUnder");
+                    // document.getElementById("bgSlant").classList.add("bgSlantOver");
                 }
                 else {
                     document.body.classList.remove("invert");
+                    document.getElementById("bgSlant").classList.remove("bgSlantOver");
+                    document.getElementById("bgSlant").classList.add("bgSlantUnder");
                 }
             }
         }
@@ -92,7 +96,7 @@ function toggleMenu() {
     else {
         menuBurg.style.display = "block";
         menuClose.style.display = "none";
-        menuMob.style.right = "-150%";
+        menuMob.style.right = "-120%";
         var h = document.getElementById("home");
         var l = document.getElementById("logo");
         if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
