@@ -46,6 +46,8 @@ html {
 }
 #homeCanvas {
     position: fixed;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: -2;
@@ -142,6 +144,7 @@ html {
     text-align: center;
 }
 #footLinks {
+    padding: 2em;
 	background-color: #455a64;
 	min-height: 8em;
 }
