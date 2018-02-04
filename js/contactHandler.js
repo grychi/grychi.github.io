@@ -1,4 +1,5 @@
 function getFormData() {
+    var data = {};
     var elements = document.getElementById("cForm").elements;
     var fields = Object.keys(elements).map(function (k) {
         if (elements[k].name !== undefined) {
@@ -7,18 +8,15 @@ function getFormData() {
     }).filter(function (item, pos, self) {
         return self.indexOf(item) == pos && item;
     });
-    var data = {};
     fields.forEach(function (k) {
         data[k] = elements[k].value;
     });
-    console.log(data);
     return data;
 }
-
 function handleFormSubmit(event) {
     event.preventDefault();
     var data = getFormData();
-    var url = event.target.action; //
+    var url = event.target.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -35,7 +33,6 @@ function handleFormSubmit(event) {
     }).join('&')
     xhr.send(encoded);
 }
-
 function loaded() {
     var form = document.getElementById('cForm');
     form.addEventListener("submit", handleFormSubmit, false);
