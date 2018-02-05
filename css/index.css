@@ -37,6 +37,7 @@ html {
 	color: white;
 	font-size: 2em;
 	display: block;
+	/* float: left; */
 	margin: 0.5em auto;
 }
 #home {
@@ -107,6 +108,7 @@ html {
     margin-right: 0.5em;
     border-radius: 50%;
     text-align: center;
+    /* transition: none; */
 }
 #logoIco i {
     font-size: 1em;
@@ -133,7 +135,7 @@ html {
     background-color: #3F51B5;
     margin: auto;
     border-radius: 50%;
-    background-image: url('../img/portrait.png');
+    background-image: url('../asset/me.png');
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
