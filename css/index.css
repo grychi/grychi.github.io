@@ -18,6 +18,15 @@ html {
 .nav-icons i:hover {
     opacity: 1;
 }
+.nav-icons a {
+    float: right;
+}
+#navIcoDesc {
+    float: left;
+    color: var(--topcolor);
+    margin: 0 1em;
+    opacity: 0.8;
+}
 #mobileMenuClose {
     display: none;
 }
@@ -32,12 +41,27 @@ html {
     background-color: #37474F;
     transition: 1s all;
 }
+#menuIcoWrap {
+    margin: 4em auto;
+    width: 8em;
+}
+#menu a {
+    color: white;
+    height: 6em;
+    width: 6em;
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.5em;
+    float: left;
+    line-height: 1;
+    border-radius: 0.5em;
+}
+#menu a:hover {
+    background-color: #263238;
+}
 .menu-icons i {
-	width: 1em;
-	color: white;
 	font-size: 2em;
-	display: block;
-	/* float: left; */
 	margin: 0.5em auto;
 }
 #home {
@@ -128,11 +152,12 @@ html {
     margin: 2em;
     color: white;
     text-align: center;
+    position: relative;
 }
 #quickViewProfile {
     height: 8em;
     width: 8em;
-    background-color: #3F51B5;
+    background-color: #673AB7;
     margin: auto;
     border-radius: 50%;
     background-image: url('../asset/me.png');
@@ -142,6 +167,16 @@ html {
 }
 #quickViewName {
     font-weight: bold;
+    font-size: 1.5em;
+    color: #607D8B;
+}
+#quickViewText {
+    position: absolute;
+    top: calc(100% + 2em);
+    z-index: -1;
+    width: 100%;
+    padding: 2em 0;
+    line-height: 2;
 }
 #foot {
 	position: relative;

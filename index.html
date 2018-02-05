@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/beta.js"></script>
+    <script type="text/javascript" src="js/navBar.js"></script>
     <script type="text/javascript" src="js/wordMixer.js"></script>
     <script type="text/javascript" src="js/contactHandler.js "></script>
 </head>
@@ -40,18 +41,24 @@
         <div id="homeLinks">
             <div class="tabletShow">
                 <div id="menu" class="menu-icons shadows">
-                    <a id="aboutMenuIco" href="#about">
-                        <i class="material-icons">account_circle</i>
-                    </a>
-                    <a id="deetsMenuIco" href="#deets">
-                        <i class="material-icons">description</i>
-                    </a>
-                    <a id="workMenuIco" href="#work">
-                        <i class="material-icons">work</i>
-                    </a>
-                    <a id="contactMenuIco" href="#contact">
-                        <i class="material-icons">email</i>
-                    </a>
+                    <div id="menuIcoWrap">
+                        <a id="aboutMenuIco" href="#about">
+                            <i class="material-icons">account_circle</i>
+                            <div>About Me</div>
+                        </a>
+                        <a id="deetsMenuIco" href="#deets">
+                            <i class="material-icons">description</i>
+                            <div>Details</div>
+                        </a>
+                        <a id="workMenuIco" href="#work">
+                            <i class="material-icons">work</i>
+                            <div>My Work</div>
+                        </a>
+                        <a id="contactMenuIco" href="#contact">
+                            <i class="material-icons">email</i>
+                            <div>Contact Me</div>
+                        </a>
+                    </div>
                 </div>
                 <div id="mobileMenu" class="nav-icons noselect">
                     <i id="mobileMenuBurger" class="material-icons">menu</i>
@@ -59,23 +66,24 @@
                 </div>
             </div>
             <div class="tabletGone nav-icons noselect">
-                <a id="aboutNavIco" href="#about">
-                    <i class="material-icons">account_circle</i>
-                </a>
-                <a id="deetsNavIco" href="#deets">
-                    <i class="material-icons">description</i>
+                <a id="contactNavIco" href="#contact">
+                    <i class="material-icons">email</i>
                 </a>
                 <a id="workNavIco" href="#work">
                     <i class="material-icons">work</i>
                 </a>
-                <a id="contactNavIco" href="#contact">
-                    <i class="material-icons">email</i>
+                <a id="deetsNavIco" href="#deets">
+                    <i class="material-icons">description</i>
                 </a>
+                <a id="aboutNavIco" href="#about">
+                    <i class="material-icons">account_circle</i>
+                </a>
+                <div id="navIcoDesc"></div>
             </div>
         </div>
         <div id="quickView">
             <div id="quickViewProfile" class="shadows"></div>
-            <div id="quickViewText" style="display: none;">
+            <div id="quickViewText">
                 <div id="quickViewName">
                     Gary Chi
                 </div>
@@ -146,6 +154,7 @@
     </div>
     <div id="work" class="content">
         <div class="mainContBody">
+            <h2>My Work</h2>
             <div id="showcase">
 
             </div>
