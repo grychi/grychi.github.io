@@ -120,8 +120,10 @@ var commands = {
         }
     },
     "secret": function () {
-        // secret cheat code
-        display("");
+        var secretText = ['Can you figure out what the secret text says?',
+            btoa("left right left right"),
+            'Maybe it will lead somewhere.'];
+        display(secretText, '\n');
     },
     "sort": function (a) {
         var toSort = [];

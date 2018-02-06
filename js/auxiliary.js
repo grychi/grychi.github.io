@@ -23,4 +23,19 @@ $('document').ready(function () {
     function resetNavStr() {
         navStrEl.textContent = "";
     }
+    $("#menu a").click(toggleMenu);
+    $("#screen").click(function (e) {
+        if (this.textContent != "G") {
+            this.textContent = "G";
+        }
+        else {
+            this.textContent = "R";
+        }
+    });
 });
+
+function revealSecret() {
+    var secretEl = document.getElementById("theSecret");
+    secretEl.textContent = atob(secretEl.textContent);
+    secretEl.style.display = "block";
+}

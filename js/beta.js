@@ -8,27 +8,10 @@ $(function () {
     };
     $("#termPlace").load("terminal.html", function (e) {
         window.onscroll = function (e) {
-            var h = document.getElementById("home");
-            if (!isInView(h)) {
-                document.body.classList.add("bodyEven");
-            }
-            else {
-                document.body.classList.remove("bodyEven");
-            }
-            var h = document.getElementById("home");
-            var l = document.getElementById("logo");
-            if (!menuOpened) {
-                if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
-                    document.body.classList.add("invert");
-                    // document.getElementById("bgSlant").classList.remove("bgSlantUnder");
-                    // document.getElementById("bgSlant").classList.add("bgSlantOver");
-                }
-                else {
-                    document.body.classList.remove("invert");
-                    document.getElementById("bgSlant").classList.remove("bgSlantOver");
-                    document.getElementById("bgSlant").classList.add("bgSlantUnder");
-                }
-            }
+            readjust();
+        }
+        window.onresize = function (e) {
+            readjust();
         }
         currStr = "Gary Chi";
         var gDesc = ['Software Developer',
@@ -80,8 +63,30 @@ $(function () {
         }
     });
     document.getElementById("mobileMenu").addEventListener("click", toggleMenu);
-    // also toggle menu when pressing item
 })
+function readjust() {
+    var h = document.getElementById("home");
+    if (!isInView(h)) {
+        document.body.classList.add("bodyEven");
+    }
+    else {
+        document.body.classList.remove("bodyEven");
+    }
+    var h = document.getElementById("home");
+    var l = document.getElementById("logo");
+    if (!menuOpened) {
+        if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
+            document.body.classList.add("invert");
+            // document.getElementById("bgSlant").classList.remove("bgSlantUnder");
+            // document.getElementById("bgSlant").classList.add("bgSlantOver");
+        }
+        else {
+            document.body.classList.remove("invert");
+            document.getElementById("bgSlant").classList.remove("bgSlantOver");
+            document.getElementById("bgSlant").classList.add("bgSlantUnder");
+        }
+    }
+}
 
 function toggleMenu() {
     var menuMob = document.getElementById("menu");

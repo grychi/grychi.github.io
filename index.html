@@ -8,12 +8,13 @@
     <title>Gary Chi</title>
     <link href="css/beta.css" type="text/css" rel="stylesheet" />
     <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link href="css/work.css" type="text/css" rel="stylesheet" />
     <link href="css/contact.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/beta.js"></script>
-    <script type="text/javascript" src="js/navBar.js"></script>
+    <script type="text/javascript" src="js/auxiliary.js"></script>
     <script type="text/javascript" src="js/wordMixer.js"></script>
     <script type="text/javascript" src="js/contactHandler.js "></script>
 </head>
@@ -104,10 +105,15 @@
         <div class="mainCont orientA">
             <div class="mainContBody">
                 <h2>About Me</h2>
-                <p>I am a software developer based in New York. I enjoy creating software and learning all aspects of computer
-                    science. I like problem-solving and mathematics. I design clean, minimalistic, and professional user
-                    interfaces. I explore science fiction ideas and concepts because it provokes the imagination and inspires
-                    technological advancement. I seek to learn, to be inspired, and to work hard doing things I enjoy.</p>
+                <p>
+                    I am a software developer based in New York. I enjoy creating software and learning all aspects of computer science. I like
+                    problem-solving and mathematics. I design clean, minimalistic, and professional user interfaces. I explore
+                    science fiction ideas and concepts because it provokes the imagination and inspires technological advancement.
+                    I seek to learn, to be inspired, and to work hard doing things I enjoy.
+                </p>
+                <p id="theSecret" style="display: none">
+                    QWxzbywgbXkgZ2lybGZyaWVuZCBSZWJlY2NhIERlbmcgaXMgZGVmaW5pdGVseSB0aGUgY3V0ZXN0LiBJIGxvdmUgaGVyIHZlcnkgbXVjaC4
+                </p>
             </div>
         </div>
     </div>
@@ -153,20 +159,50 @@
         </div>
     </div>
     <div id="work" class="content">
-        <div class="mainContBody">
-            <h2>My Work</h2>
-            <div id="showcase">
-
+        <div class="sideCont orientA">
+            <div id="workCanvas">
+                <div id="table"> </div>
+                <div id="screen" class="shadows noselect">
+                    G
+                </div>
             </div>
-            <div id="showCaseDesc">
-
+        </div>
+        <div class="mainCont orientA">
+            <div class="mainContBody">
+                <h2>My Work</h2>
+                <div id="workShowcase">
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                    <div class="workCard">
+                        <div class="workCardImg"></div>
+                        <div class="workCardText"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div id="contact" class="content">
         <div class="sideCont orientA">
             <div id="contactCanvas">
-                <div id="chatBubB">
+                <div id="chatBubB" class="shadows">
                     <div id="smiley">
                         <div class="eyes">
                             <div class="eye"></div>
@@ -175,7 +211,7 @@
                         <div id="mouth"></div>
                     </div>
                 </div>
-                <div id="chatBubW">
+                <div id="chatBubW" class="shadows">
                     <div id="question" class="question-default">
                         <i id="helper" class="material-icons">help</i>
                     </div>
@@ -189,11 +225,13 @@
             <div class="mainContBody">
                 <div id="divForm">
                     <h2>Contact Me</h2>
-                    <p>I am always eager to work on new exciting projects. If you think I can help you with something or just
-                        want to say hi, go ahead and send an e-mail to
+                    <p>
+                        I am always eager to work on new exciting projects. If you think I can help you with something or just want to say hi, go
+                        ahead and send an e-mail to
                         <a href="mailto:garychi@nyu.edu">garychi@nyu.edu</a>.
-                        <br> Or you can fill out the form below.
-                        <br>
+                    </p>
+                    <p>
+                        Or you can fill out the form below.
                     </p>
                     <form id="cForm" method="POST" action="https://script.google.com/macros/s/AKfycbyMGSBHVxAGoKPhXVBb6D4DEab2ZvHABnrpFjsgfpN-0hxgdFq2/exec">
                         <input type="text" name="cName" placeholder="Name" maxlength="35" required>
@@ -211,11 +249,18 @@
     </div>
     <div id="foot">
         <div id="footLinks">
+            <h3>Connect with me</h3>
+            <div id="footFacebook" class="foot-icon">
+                <img src="img/facebook.svg">
+            </div>
             <div id="footGithub" class="foot-icon">
-
+                <img src="img/github.svg">
             </div>
             <div id="footLinkedIn" class="foot-icon">
-
+                <img src="img/linkedin.svg">
+            </div>
+            <div id="footTumblr" class="foot-icon">
+                <img src="img/tumblr.svg">
             </div>
         </div>
         <div id="cpyr"> &copy; 2018 Gary Chi </div>

@@ -13,8 +13,9 @@ function playGame() {
                 else {
                     gameSubject = "a " + gameSubject;
                 }
+                this.stats.events += 1;
                 gameText = ['On your way, you encounter ' + gameSubject + '.',
-                    'What would you do?'];
+                    'Will you continue (Y/N)?'];
             }
             else {
                 inGame = false;
@@ -32,6 +33,7 @@ function playGame() {
             "potential": 10,
             "rich": 1
         }
+        this.completion = new Set();
         this.inventory = new Set();
 
         var mystics = "Centaur, Chimera, Cyclops, Dragon, Dwarf, Elf, Fairy, Ghost, Giant, Goblin, Hermit, Hydra, Knight, Mermaid, Minotaur, Nymph, Ogre, Orc, Pegasus, Skeleton, Troll, Unicorn, Vampire, Werewolf, Wizard, Yeti, Zombie";
@@ -48,19 +50,19 @@ function playGame() {
             collection.add(a);
             switch (a) {
                 case "pet rock":
-                    stats.potential += 2;
+                    this.stats.potential += 2;
                     break;
                 case "shiny coin":
-                    stats.rich += 1;
+                    this.stats.rich += 1;
                     break;
                 case "lucky pendant":
-                    stats.luck += 0.1;
+                    this.stats.luck += 0.1;
                     break;
                 case "wooden sword":
-                    stats.power += 5;
+                    this.stats.power += 5;
                     break;
                 case "diamond sword":
-                    stats.power += 10;
+                    this.stats.power += 10;
                     break;
                 default:
                     console.log("error");
