@@ -1,269 +1,268 @@
 <!DOCTYPE HTML>
-<!--© 2016, Gary Chi-->
+<!--© 2018, Gary Chi-->
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width" />
-	<title>Gary Chi</title>
-	<link href="css/stylesheet.css" type="text/css" rel="stylesheet" />
-	<link href="css/canvas.css" type="text/css" rel="stylesheet" />
-	<link href="css/about.css" type="text/css" rel="stylesheet" />
-	<link href="css/resume.css" type="text/css" rel="stylesheet" />
-	<link href="css/piano.css" type="text/css" rel="stylesheet" />
-	<link href="css/project.css" type="text/css" rel="stylesheet" />
-	<link href="css/contact.css" type="text/css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1"></script>
-	<script type="text/javascript" src="js/indexScript.js"></script>
-	<script type="text/javascript" src="js/resumeScript.js"></script>
-	<link rel="shortcut icon" href="favicon.ico" />
-	<script>
-		$(function () { $(document).on("click", "a[href*=#]:not([href=#])", function () { if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) { var t = $(this.hash); if (t = t.length ? t : $("[name=" + this.hash.slice(1) + "]"), t.length) return $("html,body").animate({ scrollTop: t.offset().top }, 1e3), !1 } }) });
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function () { window.jQuery || (document.querySelector("#warning").style.display = "block") });
-	</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Gary Chi</title>
+    <link href="css/beta.css" type="text/css" rel="stylesheet" />
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link href="css/work.css" type="text/css" rel="stylesheet" />
+    <link href="css/contact.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/beta.js"></script>
+    <script type="text/javascript" src="js/auxiliary.js"></script>
+    <script type="text/javascript" src="js/termFunc.js"></script>
+    <script type="text/javascript" src="js/termGame.js"></script>
+    <script type="text/javascript" src="js/wordMixer.js"></script>
+    <script type="text/javascript" src="js/myWork.js"></script>
+    <script type="text/javascript" src="js/contactHandler.js "></script>
 </head>
 
 <body>
-	<div id="warning" style="position:fixed; bottom:4em; width:100%; background:transparent; z-index:5; text-align:center;">
-		<a href="javascript:location.reload(true);">
-			<div style="display:inline-block; height:3em; margin:auto; background: #E91E63; border-radius: 1em; line-height:1em; color:white;">
-				<p style="display:inline-block; margin:1em;">Whoops, something went wrong. Please refresh the page.</p>
-			</div>
-		</a>
-	</div>
-	<script>
-		document.getElementById("warning").style.display = "none";
-	</script>
-	<div id="topBar">
-		<a href="#home">
-			Gary Chi
-			<br />
-		</a>
-	</div>
-	<div id="navigation">
-		<a href="#about">about</a> &nbsp
-		<a href="#resume">resume</a> &nbsp
-		<a href="#projects">projects</a> &nbsp
-		<a href="#contact">contact</a>
-	</div>
-	<!--Should try to replace with HTML canvas-->
-	<div id="burger" style="font-size:2em;">&#9776;</div>
-	<div id="close" style="font-size:2em;">&#x2716;</div>
-	<div id="mMenu">
-		<br>
-		<br>
-		<br>
-		<a href="#about" class="mMenu">about</a>
-		<br>
-		<a href="#resume" class="mMenu">resume</a>
-		<br>
-		<a href="#projects" class="mMenu">projects</a>
-		<br>
-		<a href="#contact" class="mMenu">contact</a>
-	</div>
-	<div id="home" class="content contentA">
-		<a href="#about">
-			<div class="next button">
-				<br>
-				<span class="arrows">&gt;</span>
-			</div>
-		</a>
-		<div id="welcome"> hello </div>
-		<div id="canvas"> </div>
-	</div>
-	<div id="about" class="content contentB">
-		<a href="#resume">
-			<div class="next button">
-				<br>
-				<span class="arrows">&gt;</span>
-			</div>
-		</a>
-		<a href="#home">
-			<div class="back button">
-				<br>
-				<span class="arrows">&lt;</span>
-			</div>
-		</a>
-		<div class="aniDivL">
-			<h2>About Me</h2>
-			<p>I am currently a 3rd year student studying at New York University majoring in computer science. I am interested in technology
-				and I like to read science fiction. I seek to learn, to be inspired, and to work hard doing things I enjoy.
-			</p>
-		</div>
-		<div id="aboutCanvas" class="aniR">
-			<div id="person"> </div>
-			<div id="arms"> </div>
-			<div id="table"> </div>
-			<div id="screen">
-				<p style="text-align:center; font-size:4vh; text-shadow: 0 0 1em #02edff;">
-					<b>
-						<i>
-							<br>G</i>
-					</b>
-				</p>
-			</div>
-		</div>
-	</div>
-	<div id="resume" class="content contentA">
-		<a href="#projects">
-			<div class="next button">
-				<br>
-				<span class="arrows">&gt;</span>
-			</div>
-		</a>
-		<a href="#about">
-			<div class="back button">
-				<br>
-				<span class="arrows">&lt;</span>
-			</div>
-		</a>
-		<div class="aniDivL">
-			<h2>The Details</h2>
-			<div id="resChange">
-				<p>Here are my skills and experience at a glance.</p>
-				<br>
-				<p>Click on a category to see an overview. Then, click on an item to see a brief description.</p>
-			</div>
-		</div>
-		<div id="resumeCanvas" class="aniR">
-			<div id="resNav" style="font-size: 1.2em;">
-				<a id="skills" href="#resume">skills</a> &nbsp
-				<a id="tools" href="#resume">tools</a> &nbsp
-				<a id="exp" href="#resume">experience</a> &nbsp
-				<a id="bonus" href="#resume">bonus</a>
-			</div>
-			<!--Should use JS to automatically generate and efficiently update items.-->
-			<div id="defaultCont" class="resCont" style="display: block;">
-				<div id="defA" class="box"></div>
-				<div id="defB" class="box"></div>
-				<div id="defC" class="box"></div>
-				<div id="defD" class="box"></div>
-				<div id="defE" class="box"></div>
-				<div id="defF" class="box"></div>
-			</div>
-			<div id="skillsCont" class="resCont">
-				<div id="skillA" class="box">HTML</div>
-				<div id="skillB" class="box">CSS</div>
-				<div id="skillC" class="box">JS</div>
-				<div id="skillD" class="box">C++</div>
-				<div id="skillE" class="box">Java</div>
-				<span id="skillsHide" style="display: none;">
-					<div id="skillF" class="box">Python</div>
-					<div id="skillG" class="box">AS</div>
-					<div id="skillH" class="box">SQL</div>
-					<div id="skillI" class="box">PHP</div>
-					<div id="skillJ" class="box">Ruby</div>
-				</span>
-				<div class="more box" id="skillsMore">+</div>
-			</div>
-			<div id="toolsCont" class="resCont">
-				<div id="toolA" class="box">Git</div>
-				<div id="toolB" class="box">Adobe</div>
-				<div id="toolC" class="box">Atom</div>
-				<div id="toolD" class="box">VS</div>
-				<div id="toolE" class="box">OS</div>
-				<span id="toolsHide" style="display: none;">
-					<div id="toolF" class="box">Office</div>
-					<div id="toolG" class="box">GIMP</div>
-					<div id="toolH" class="box">Android</div>
-				</span>
-				<div class="more box" id="toolsMore">+</div>
-			</div>
-			<div id="expCont" class="resCont">
-				<div id="expA" class="box">NYU</div>
-				<div id="expB" class="box">FindU</div>
-				<div id="expC" class="box">Tutor</div>
-				<div class="more box" id="expMore">?</div>
-			</div>
-			<div id="bonusCont" class="resCont">
-				<div id="bonusA" class="box">Art</div>
-				<div id="bonusB" class="box">Music</div>
-				<div id="bonusC" class="box">EE</div>
-			</div>
-		</div>
-	</div>
-	<div id="projects" class="content contentB">
-		<a href="#contact">
-			<div class="next button">
-				<br>
-				<span class="arrows">&gt;</span>
-			</div>
-		</a>
-		<a href="#resume">
-			<div class="back button">
-				<br>
-				<span class="arrows">&lt;</span>
-			</div>
-		</a>
-		<div class="aniDivL">
-			<h2>Some Projects</h2>
-			<div id="projChange">
-				<p>If you're curious to see my GitHub for more projets,
-					<a href="https://github.com/therealgary">click here</a>.</p>
-				<br>
-				<p>Click on an image to see its project description.</p>
-			</div>
-		</div>
-		<!--Will reformat and group sets of picture for each project-->
-		<div id="projContainer" class="aniR">
-			<div id="bgPic"></div>
-			<div id="spA " class="smPic " style="background-image:url(img/pgr0.png); "></div>
-			<div id="spB " class="smPic " style="background-image:url(img/pgr1.png); "></div>
-			<div id="spC " class="smPic " style="background-image:url(img/pgr2.png); "></div>
-			<div id="spD " class="smPic " style="background-image:url(img/pgr3.png); "></div>
-			<div id="spE " class="smPic " style="background-image:url(img/web0.png); "></div>
-			<div id="spF " class="smPic " style="background-image:url(img/web2.png); "></div>
-		</div>
-	</div>
-	<div id="contact" class="content contentA">
-		<a href="#projects">
-			<div class="back button">
-				<br>
-				<span class="arrows">&lt;</span>
-			</div>
-		</a>
-		<div id="divForm" class="aniDivL">
-			<h2>Contact Me</h2>
-			<p>If you are interested in getting in touch, go ahead and send an e-mail to
-				<a href="mailto:gc1753@nyu.edu">gc1753@nyu.edu</a>.
-				<br> Or you can fill out the form below.
-				<br>
-			</p>
-			<form id="cForm" method="POST" action="https://script.google.com/macros/s/AKfycbyMGSBHVxAGoKPhXVBb6D4DEab2ZvHABnrpFjsgfpN-0hxgdFq2/exec">
-				<input type="text" name="cName" placeholder="Name" maxlength="35">
-				<br>
-				<input type="email" name="cEmail" placeholder="E-mail" maxlength="45">
-				<br>
-				<textarea name="cMessage" placeholder="What do you have in mind?"></textarea>
-				<br>
-				<input type="submit" value="submit" style="min-width: 8em; width: 10vw">
-			</form>
-		</div>
-		<div id="divFormSent" class="aniDivL" style="display:none;">
-			<h2>Thanks</h2>
-			<p>Your message has been successfully sent. Thanks for saying hi. I will get back to you as soon as possible.</p>
-		</div>
-		<div id="contactCanvas" class="aniR">
-			<div id="chatBubB">
-				<div id="smiley">
-					<div class="eyes">
-						<div class="eye"></div>
-						<div class="eye"></div>
-					</div>
-					<div id="mouth"></div>
-				</div>
-			</div>
-			<div id="chatBubW">
-				<div id="question">?</div>
-				<div id="check" style="display: none;">✓</div>
-			</div>
-		</div>
-	</div>
-	<div style="position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 1.5vh; line-height: 3vh; ">© 2016, Gary Chi</div>
-	<script type="text/javascript " src="js/contactHandler.js "></script>
+    <div id="home" class="content">
+        <canvas id="homeCanvas"></canvas>
+        <div id="bgSlant" class="bgSlantUnder"></div>
+        <div id="logo">
+            <a href="#home">
+                <div id="logoIco" class="shadows">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                        <path fill="#38a4dd" d="M463.21,382.5A150,150,0,1,1,424.4,237.44l-28.32,28.32a110,110,0,1,0,25.1,116.74Z" transform="translate(-168.33 -193.5)"
+                        />
+                        <path fill="#0bbcd4" d="M394.78,422.51l28.32,28.31a150,150,0,1,1,1.3-213.38l-28.32,28.32a110,110,0,1,0-1.3,156.75Z" transform="translate(-168.33 -193.5)"
+                        />
+                        <path fill="#478fcc" d="M468.33,343.5a150.19,150.19,0,0,1-5.12,39H318.33v-39Z" transform="translate(-168.33 -193.5)" />
+                    </svg>
+                </div>
+                <div id="logoName" class="phoneGone">
+                    Gary Chi
+                </div>
+            </a>
+        </div>
+        <div id="homeLinks">
+            <div class="tabletShow">
+                <div id="menu" class="menu-icons shadows">
+                    <div id="menuIcoWrap">
+                        <a id="aboutMenuIco" href="#about">
+                            <i class="material-icons">account_circle</i>
+                            <div>About Me</div>
+                        </a>
+                        <a id="deetsMenuIco" href="#deets">
+                            <i class="material-icons">description</i>
+                            <div>Details</div>
+                        </a>
+                        <a id="workMenuIco" href="#work">
+                            <i class="material-icons">work</i>
+                            <div>My Work</div>
+                        </a>
+                        <a id="contactMenuIco" href="#contact">
+                            <i class="material-icons">email</i>
+                            <div>Contact Me</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="mobileMenu" class="nav-icons noselect">
+                    <i id="mobileMenuBurger" class="material-icons">menu</i>
+                    <i id="mobileMenuClose" class="material-icons">close</i>
+                </div>
+            </div>
+            <div class="tabletGone nav-icons noselect">
+                <a id="contactNavIco" href="#contact">
+                    <i class="material-icons">email</i>
+                </a>
+                <a id="workNavIco" href="#work">
+                    <i class="material-icons">work</i>
+                </a>
+                <a id="deetsNavIco" href="#deets">
+                    <i class="material-icons">description</i>
+                </a>
+                <a id="aboutNavIco" href="#about">
+                    <i class="material-icons">account_circle</i>
+                </a>
+                <div id="navIcoDesc"></div>
+            </div>
+        </div>
+        <div id="quickView">
+            <div id="quickViewProfile" class="shadows"></div>
+            <div id="quickViewText">
+                <div id="quickViewName">
+                    Gary Chi
+                </div>
+                <div id="quickViewDesc">
+                    <div>Software Developer</div>
+                    <div>UI/UX Designer</div>
+                    <div>Student at NYU</div>
+                </div>
+            </div>
+        </div>
+        <div id="termPlace"></div>
+    </div>
+    <div id="about" class="content">
+        <div class="sideCont orientA">
+            <canvas id="aboutCanvas"></canvas>
+            <div id="aboutStrShow"></div>
+        </div>
+        <div class="mainCont orientA">
+            <div class="mainContBody">
+                <h2>About Me</h2>
+                <p>
+                    I am a software developer based in New York. I enjoy creating software and learning all aspects of computer science. I like
+                    problem-solving and mathematics. I design clean, minimalistic, and professional user interfaces. I explore
+                    science fiction ideas and concepts because it provokes the imagination and inspires technological advancement.
+                    I seek to learn, to be inspired, and to work hard doing things I enjoy.
+                </p>
+                <p id="theSecret" style="display: none">
+                    QWxzbywgbXkgZ2lybGZyaWVuZCBSZWJlY2NhIERlbmcgaXMgZGVmaW5pdGVseSB0aGUgY3V0ZXN0LiBJIGxvdmUgaGVyIHZlcnkgbXVjaC4
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="deets" class="content">
+        <div class="sideCont orientB">
+            <div id="deetsCanvas"></div>
+        </div>
+        <div class="mainCont orientB">
+            <div class="mainContBody">
+                <h2>Details</h2>
+                <p>Here are some more specific things about me at a glance. If you're really interested, you can
+                    <a href="">click here</a> to download my resume.
+                </p>
+                <div class="deetsHeader">My technical skills</div>
+                <ul class="noselect">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Git</li>
+                    <li>MySQL</li>
+                    <li>PHP</li>
+                    <li>Go</li>
+                </ul>
+                <div class="deetsHeader">My personal toolset</div>
+                <ul class="noselect">
+                    <li>Github</li>
+                    <li>Postman</li>
+                    <li>Android Studio</li>
+                    <li>Visual Studio Code</li>
+                    <li>Debian-based Linux</li>
+                    <li>Adobe Animate</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+                <!--
+                <div class="deetsHeader">Classes I am currently taking</div>
+                <div class="deetsHeader">Courses I have already taken</div>
+                -->
+            </div>
+        </div>
+    </div>
+    <div id="work" class="content">
+        <div class="sideCont orientA">
+            <div id="workCanvas">
+                <div id="table"> </div>
+                <div id="screen" class="shadows noselect">G</div>
+            </div>
+        </div>
+        <div class="mainCont orientA">
+            <div class="mainContBody">
+                <h2>My Work</h2>
+                <p>
+                    You can also see my GitHub for more side projets by
+                    <a href="https://github.com/grychi">clicking here</a>.
+                </p>
+                <div id="workShowcase"></div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="content">
+        <div class="sideCont orientA">
+            <div id="contactCanvas">
+                <div id="chatBubB" class="shadows">
+                    <div id="smiley">
+                        <div class="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div id="mouth"></div>
+                    </div>
+                </div>
+                <div id="chatBubW" class="shadows">
+                    <div id="question" class="question-default">
+                        <i id="helper" class="material-icons">help</i>
+                    </div>
+                    <div id="check" style="display: none;">
+                        <i class="material-icons">check_circle</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainCont orientA">
+            <div class="mainContBody">
+                <div id="divForm">
+                    <h2>Contact Me</h2>
+                    <p>
+                        I am always eager to work on new exciting projects. If you think I can help you with something or just want to say hi, go
+                        ahead and send an e-mail to
+                        <a href="mailto:garychi@nyu.edu">garychi@nyu.edu</a>.
+                    </p>
+                    <p>
+                        Or you can fill out the form below.
+                    </p>
+                    <form id="cForm" method="POST" action="https://script.google.com/macros/s/AKfycbyMGSBHVxAGoKPhXVBb6D4DEab2ZvHABnrpFjsgfpN-0hxgdFq2/exec">
+                        <input type="text" name="cName" placeholder="Name" maxlength="35" required>
+                        <input type="email" name="cEmail" placeholder="E-mail" maxlength="45" required>
+                        <textarea id="writing" name="cMessage" placeholder="What do you have in mind?" required></textarea>
+                        <input id="formSub" type="submit" value="Get in Touch">
+                    </form>
+                </div>
+                <div id="divFormSent" style="display:none;">
+                    <h2>Thanks</h2>
+                    <p>Your message has been successfully sent. Thanks for saying hi. I will get back to you as soon as possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <div id="modal-pop" class="shadows">
+            <div id="modal-close" class="shadows noselect" onclick="closeModal()">
+                <i class="material-icons">chevron_left</i>
+            </div>
+            <div id="modal-icon"></div>
+            <div id="modal-title">
+                <h3 id="modal-title-text"> </h3>
+                <div id="modal-title-link"> </div>
+            </div>
+            <div id="modal-body">
+                <div id="modal-desc"> </div>
+                <div id="modal-tags">
+                    <ul id="modal-tags-list"> </ul>
+                </div>
+            </div>
+            <div id="modal-imgs"> </div>
+        </div>
+    </div>
+    <div id="foot">
+        <div id="footLinks">
+            <h3>Connect with me</h3>
+            <div id="footFacebook" class="foot-icon">
+                <img src="img/facebook.svg">
+            </div>
+            <div id="footGithub" class="foot-icon">
+                <img src="img/github.svg">
+            </div>
+            <div id="footLinkedIn" class="foot-icon">
+                <img src="img/linkedin.svg">
+            </div>
+            <div id="footTumblr" class="foot-icon">
+                <img src="img/tumblr.svg">
+            </div>
+        </div>
+        <div id="cpyr"> &copy; 2018 Gary Chi </div>
+    </div>
 </body>
 
 </html>

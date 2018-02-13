@@ -10,6 +10,7 @@ body {
 	font-family: 'Anonymous Pro';
 	height: 50vh;
 	min-height: 20em;
+	max-height: 26em;
 	width: 100%;
 	background-color: #37474F;
 }
@@ -93,12 +94,6 @@ body {
 	-webkit-animation: 1s blink step-end infinite;
 	-moz-animation: 1s blink step-end infinite;
 	animation: 1s blink step-end infinite;
-}
-.noselect {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
 }
 @keyframes blink {
 	from, to {

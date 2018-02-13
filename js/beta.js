@@ -8,23 +8,10 @@ $(function () {
     };
     $("#termPlace").load("terminal.html", function (e) {
         window.onscroll = function (e) {
-            var h = document.getElementById("home");
-            if (!isInView(h)) {
-                document.body.classList.add("bodyEven");
-            }
-            else {
-                document.body.classList.remove("bodyEven");
-            }
-            var h = document.getElementById("home");
-            var l = document.getElementById("logo");
-            if (!menuOpened) {
-                if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
-                    document.body.classList.add("invert");
-                }
-                else {
-                    document.body.classList.remove("invert");
-                }
-            }
+            readjust();
+        }
+        window.onresize = function (e) {
+            readjust();
         }
         currStr = "Gary Chi";
         var gDesc = ['Software Developer',
@@ -76,8 +63,36 @@ $(function () {
         }
     });
     document.getElementById("mobileMenu").addEventListener("click", toggleMenu);
-    // also toggle menu when pressing item
+    document.getElementById("modal").addEventListener("click", function(e) {
+        if(e.target == this) {
+            closeModal();
+        }
+    });
+    readjust();
 })
+function readjust() {
+    var h = document.getElementById("home");
+    if (!isInView(h)) {
+        document.body.classList.add("bodyEven");
+    }
+    else {
+        document.body.classList.remove("bodyEven");
+    }
+    var h = document.getElementById("home");
+    var l = document.getElementById("logo");
+    if (!menuOpened) {
+        if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
+            document.body.classList.add("invert");
+            // document.getElementById("bgSlant").classList.remove("bgSlantUnder");
+            // document.getElementById("bgSlant").classList.add("bgSlantOver");
+        }
+        else {
+            document.body.classList.remove("invert");
+            document.getElementById("bgSlant").classList.remove("bgSlantOver");
+            document.getElementById("bgSlant").classList.add("bgSlantUnder");
+        }
+    }
+}
 
 function toggleMenu() {
     var menuMob = document.getElementById("menu");
@@ -92,7 +107,7 @@ function toggleMenu() {
     else {
         menuBurg.style.display = "block";
         menuClose.style.display = "none";
-        menuMob.style.right = "-150%";
+        menuMob.style.right = "-120%";
         var h = document.getElementById("home");
         var l = document.getElementById("logo");
         if (h.offsetTop + h.offsetHeight - l.offsetHeight < window.pageYOffset) {
@@ -125,4 +140,64 @@ function scrollTo(a) {
     }, 800, 'swing', function () {
         window.location.hash = a;
     });
+}
+
+// ico: string, path to icon
+// title: string, title in header
+// link: string, url to project
+// tags: string array, tags
+// desc: string, description
+// imgs: string array, image file name
+// imgDir: string, image directory
+function openModal(ico = "", title = "", link = "", tags = [], desc = "", imgs = [], imgDir = "") {
+    document.getElementById("modal-icon").style.backgroundImage = 'url("' + ico + '")';
+    document.getElementById("modal-title-text").textContent = title;
+
+    var placeLink = document.getElementById("modal-title-link");
+    clearInner(placeLink);
+    var tmpLink = document.createElement("a");
+    if (link.includes("//")) {
+        tmpLink.textContent = link.substr(link.indexOf("//") + 2, link.length);
+    }
+    else {
+        tmpLink.textContent = link;
+    }
+    tmpLink.href = link;
+    placeLink.appendChild(tmpLink);
+
+    var placeList = document.getElementById("modal-tags-list");
+    clearInner(placeList);
+    for (var i = 0; i < tags.length; i++) {
+        var tmpItem = document.createElement("li");
+        tmpItem.textContent = tags[i];
+        placeList.appendChild(tmpItem);
+    }
+
+    document.getElementById("modal-desc").textContent = desc;
+
+    var placeImg = document.getElementById("modal-imgs");
+    clearInner(placeImg);
+    var textImg = document.createElement("div");
+    textImg.classList.add("modal-img");
+    textImg.style.backgroundColor = "#00BCD4";
+    textImg.innerHTML = '<i class="material-icons">subject</i>';
+    placeImg.appendChild(textImg);
+    for (var i = 0; i < imgs.length; i++) {
+        var tmpImg = document.createElement("div");
+        tmpImg.classList.add("modal-img");
+        tmpImg.style.backgroundImage = 'url("' + imgDir + imgs[i] + '")';
+        placeImg.appendChild(tmpImg);
+    }
+
+    document.getElementById("modal").style.left = 0;
+    document.body.classList.add("noscroll");
+}
+function closeModal() {
+    document.getElementById("modal").style.left = "-100%";
+    document.body.classList.remove("noscroll");
+}
+function clearInner(a) {
+    while (a.firstChild) {
+        a.removeChild(a.firstChild);
+    }
 }

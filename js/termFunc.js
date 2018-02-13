@@ -1,4 +1,4 @@
-var tellOut = [
+var quOut = [
     "It is certain",
     "It is decidedly so",
     "Without a doubt",
@@ -38,10 +38,12 @@ var manual = {
         'For example, enter "mk myCommand 23*27".',
         'This creates the command "myCommand" to be used.',
         'Calling "myCommand" will then output "621".'],
-    "secret": "Shhh",
-    "tell": ['Provides the answers to your yes/no questions.',
-        'Usage: "tell me if I am smart" will yield an answer.',
+    "qu": ['Provides the answers to your yes/no questions.',
+        'Usage: "qu Do you think I am cool?" will yield an answer.',
         'Warning: results may be alarming.'],
+    "secret": "Shhh",
+    "sort": ['Returns the input sorted in alphabetical order.',
+        'Usage: "sort bananas apples" will return "apples bananas".'],
     "time": "Outputs the current time provided by JavaScript.",
     "work": "Shows the section with my projects and experiences."
 }
@@ -78,7 +80,7 @@ var commands = {
         display('Hi there!');
     },
     "help": function () {
-        helpText = ['Gary\'s Terminal [Version: 1.8.16]',
+        var helpText = ['Gary\'s Terminal [Version: 1.8.16]',
             'https://github.com/therealgary',
             'Enter "ls" to list all commands',
             'Enter "man" to read the manual']
@@ -88,7 +90,7 @@ var commands = {
         display(commands);
     },
     "man": function () {
-        manText = ['This is a not the typical terminal you are familiar with.',
+        var manText = ['This is a not the typical terminal you are familiar with.',
             'It is very basic and was created just for fun. Nothing will be saved.',
             'The general use is just entering a command followed by parameters.',
             'For example, enter "all" to list available commands.',
@@ -103,17 +105,33 @@ var commands = {
         commands[a] = function () { display(eval(b)); };
         display("");
     },
-    "secret": function () {
-        //mini adventure game
-        display("");
+    "play": function () {
+        // mini adventure game
+        var gameText = ['Enter anything to start.', 'Type "end" to end game.'];
+        display(gameText, '\n');
+        playGame();
     },
-    "tell": function () {
+    "qu": function () {
         if (arguments.length == 0) {
-            display("What can I tell you?");
+            display("What do you want to know?");
         }
         else {
-            display(tellOut[Math.floor(Math.random() * tellOut.length)]);
+            display(quOut[Math.floor(Math.random() * quOut.length)]);
         }
+    },
+    "secret": function () {
+        var secretText = ['Can you figure out what the secret text says?',
+            btoa("left right left right"),
+            'Maybe it will lead somewhere.'];
+        display(secretText, '\n');
+    },
+    "sort": function (a) {
+        var toSort = [];
+        for (var i = 0; i < arguments.length; i++) {
+            toSort.push(arguments[i]);
+        }
+        toSort.sort();
+        display(toSort);
     },
     "time": function () {
         var d = new Date();
@@ -127,47 +145,52 @@ var commands = {
 
 function interpret(a) {
     var b = a.split(" ");
-    if (hasNum(b[0])) {
-        try {
-            display(eval(a))
-        }
-        catch (err) {
-            display(err);
-        }
+    if (inGame) {
+        currGame.next();
     }
     else {
-        var tmpArgs = [];
-        for (var i = 0; i <= b.length; i++) {
-            if (i == b.length || b[i] == "&&") {
-                var c = tmpArgs[0];
-                tmpArgs.shift();
-                try {
-                    if (commands[c]) {
-                        commands[c].apply(this, tmpArgs);
+        if (hasNum(b[0])) {
+            try {
+                display(eval(a))
+            }
+            catch (err) {
+                display(err);
+            }
+        }
+        else {
+            var tmpArgs = [];
+            for (var i = 0; i <= b.length; i++) {
+                if (i == b.length || b[i] == "&&") {
+                    var c = tmpArgs[0];
+                    tmpArgs.shift();
+                    try {
+                        if (commands[c]) {
+                            commands[c].apply(this, tmpArgs);
+                        }
+                        else if (!c) {
+                            return;
+                        }
+                        else {
+                            display("Unknown command, please try again.")
+                        }
                     }
-                    else if (!c) {
-                        return;
+                    catch (err) {
+                        display(err);
+                    }
+                    tmpArgs = [];
+                }
+                else if (b[i] == "--help") {
+                    if (manual[tmpArgs[0]]) {
+                        display(manual[tmpArgs[0]], '\n');
                     }
                     else {
-                        display("Unknown command, please try again.")
+                        display("No such entry exists.");
                     }
+                    tmpArgs = [];
                 }
-                catch (err) {
-                    display(err);
+                else if (b[i] != "") {
+                    tmpArgs.push(b[i]);
                 }
-                tmpArgs = [];
-            }
-            else if (b[i] == "--help") {
-                if (manual[tmpArgs[0]]) {
-                    display(manual[tmpArgs[0]], '\n');
-                }
-                else {
-                    display("No such entry exists.");
-                }
-                tmpArgs = [];
-            }
-            else if (b[i] != "") {
-                tmpArgs.push(b[i]);
             }
         }
     }

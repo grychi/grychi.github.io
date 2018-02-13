@@ -7,38 +7,22 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>Gary Chi</title>
 	<link href="css/index.css" type="text/css" rel="stylesheet" />
-	<link href="css/contact.css" type="text/css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/alpha.js"></script>
 	<script type="text/javascript" src="js/canvas.js"></script>
 </head>
 
-<body>
+<body style="background: #37474F; margin: 0; padding: 0;">
 	<div id="warning" style="position:fixed;top: 2em;width:100%;background:transparent;z-index:5;text-align:center;">
 		<a href="javascript:location.reload(true);">
-			<div style="display:inline-block;height:3em;margin:auto;border-radius: 1em;line-height:1em;color:white;background-color: rgba(38, 50, 56, 0.8);">
-				<p style="display:inline-block; margin:1em;">Whoops, something went wrong. Please refresh the page.</p>
+			<div style="display:inline-block; border-radius: 1em; color:white;background-color: rgb(38, 50, 56);">
+				<p style="margin:1em; font-family: Catamaran;">Whoops, something went wrong. Please refresh the page.</p>
 			</div>
 		</a>
 	</div>
 	<div id="home" class="content">
 		<canvas id="welcome"></canvas>
-		<div id="canTop">
-			<a id="aboutIco" class="nav-icons" href="#about">
-				<i class="material-icons">account_circle</i>
-			</a>
-			<a id="deetsIco" class="nav-icons" href="#deets">
-				<i class="material-icons">description</i>
-			</a>
-			<a id="workIco" class="nav-icons" href="#work">
-				<i class="material-icons">work</i>
-			</a>
-			<a id="contactIco" class="nav-icons" href="#contact">
-				<i class="material-icons">email</i>
-			</a>
-		</div>
 	</div>
 </body>
 
