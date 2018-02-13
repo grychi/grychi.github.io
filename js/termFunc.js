@@ -1,4 +1,4 @@
-var tellOut = [
+var quOut = [
     "It is certain",
     "It is decidedly so",
     "Without a doubt",
@@ -116,7 +116,7 @@ var commands = {
             display("What do you want to know?");
         }
         else {
-            display(tellOut[Math.floor(Math.random() * tellOut.length)]);
+            display(quOut[Math.floor(Math.random() * quOut.length)]);
         }
     },
     "secret": function () {

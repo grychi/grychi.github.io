@@ -1,4 +1,4 @@
-therealgary.github.io
+garychi.me
 ===
 My GitHub Page to tell you about me and what I do.
 

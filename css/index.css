@@ -40,6 +40,7 @@ html {
     z-index: -1;
     background-color: #263238;
     transition: 1s all;
+    overflow: scroll;
 }
 #menuIcoWrap {
     margin: 4em auto;
@@ -169,7 +170,7 @@ html {
 #quickViewName {
     font-weight: bold;
     font-size: 1.5em;
-    color: #607D8B;
+    color: #90A4AE;
 }
 #quickViewText {
     position: absolute;

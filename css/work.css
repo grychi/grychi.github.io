@@ -14,7 +14,7 @@
     width: 36vh;
     top: 92%;
     position: absolute;
-    background: #CFD8DC;
+    background-color: #CFD8DC;
     border-radius: 1vh;
 }
 #screen {
@@ -22,7 +22,7 @@
     top: 20%;
     height: 24vh;
     width: 36vh;
-    background: #455A64;
+    background-color: #455A64;
     border-radius: 1.5vh;
     color: #FAFAFA;
     line-height: 4;
@@ -36,7 +36,7 @@
     bottom: -20%;
     height: 1vh;
     width: 20vh;
-    background: #90A4AE;
+    background-color: #90A4AE;
     border-radius: 0.5em;
 }
 #screen:before {
@@ -61,6 +61,7 @@
     margin: 1em;
 }
 .workCard:hover {
+    background-color: white;
     box-shadow: 0 0.1em 0.4em rgba(38, 50, 56, 0.5);
     -webkit-box-shadow: 0 0.1em 0.4em rgba(38, 50, 56, 0.5);
 }
@@ -69,7 +70,10 @@
 }
 .workCardImg {
     height: 8em;
-    background: #CFD8DC;
+    background-color: #CFD8DC;
+    background-size: 24em;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .workCardText {
     text-align: center;

@@ -25,7 +25,7 @@ $('document').ready(function () {
     }
     $("#menu a").click(toggleMenu);
     $("#screen").click(function (e) {
-        if (this.textContent != "G") {
+        if (this.textContent.trim() != "G") {
             this.textContent = "G";
         }
         else {
