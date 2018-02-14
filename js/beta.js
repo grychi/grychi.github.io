@@ -44,8 +44,11 @@ $(function () {
             }
         });
         document.getElementById("termHeadNavClose").addEventListener("click", function (e) {
-            document.getElementById("terminal").classList.add("termHide");
-        })
+            toggleTerm(false);
+        });
+        document.getElementById("quickViewTerm").addEventListener("click", function (e) {
+            toggleTerm(true);
+        });
     })
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -63,8 +66,8 @@ $(function () {
         }
     });
     document.getElementById("mobileMenu").addEventListener("click", toggleMenu);
-    document.getElementById("modal").addEventListener("click", function(e) {
-        if(e.target == this) {
+    document.getElementById("modal").addEventListener("click", function (e) {
+        if (e.target == this) {
             closeModal();
         }
     });
@@ -117,6 +120,28 @@ function toggleMenu() {
     menuOpened = !menuOpened;
 }
 
+function toggleTerm(a) {
+    var t = document.getElementById("terminal");
+    var q = document.getElementById("quickViewText");
+    if (a == null) {
+        t.classList.toggle("termHide");
+        t.classList.toggle("termShow");
+        q.classList.toggle("termHide");
+        q.classList.toggle("termShow");
+    }
+    else if (a) {
+        t.style.visibility = "visible";
+        t.style.zIndex = 1;
+        q.style.visibility = "hidden";
+        q.style.zIndex = -1;
+    }
+    else {
+        t.style.visibility = "hidden";
+        t.style.zIndex = -1;
+        q.style.visibility = "visible";
+        q.style.zIndex = 1;
+    }
+}
 function updateTerm() {
     document.getElementById("termBodyInput").textContent = currStr;
     var toScroll = document.getElementById("termBody");
@@ -179,6 +204,7 @@ function openModal(ico = "", title = "", link = "", tags = [], desc = "", imgs =
     clearInner(placeImg);
     var textImg = document.createElement("div");
     textImg.classList.add("modal-img");
+    textImg.classList.add("noselect");
     textImg.style.backgroundColor = "#00BCD4";
     textImg.innerHTML = '<i class="material-icons">subject</i>';
     placeImg.appendChild(textImg);
