@@ -3,10 +3,22 @@ var currGame;
 function playGame() {
     inGame = true;
     function game() {
+        this.state = {
+            "retries": 0, // takes gems
+            "currEvent": false, // used for inputs
+            "currEventType": 0
+        }
         this.next = function (a) {
             var gameText = "";
             if (currStr != "end") {
-                var gameSubject = mystics[Math.floor(Math.random() * mystics.length)];
+                var whichEvent = Math.floor(Math.random() * 2);
+                var gameSubject, gameEventText, gamePromptText;
+                if (whichEvent) {
+                    gameSubject = animals[Math.floor(Math.random() * animals.length)];
+                }
+                else {
+                    gameSubject = mystics[Math.floor(Math.random() * mystics.length)];
+                }
                 if (['a', 'e', 'i', 'o', 'u'].indexOf(gameSubject[0].toLowerCase()) !== -1) {
                     gameSubject = "an " + gameSubject;
                 }
@@ -25,13 +37,13 @@ function playGame() {
             display(gameText, '\n');
         }
         this.stats = {
-            "events": 0,
-            "gems": 0,
-            "luck": Math.random() * 0.4 + 0.4,
-            "power": 10,
-            "energy": 10,
-            "potential": 10,
-            "rich": 1
+            "events": 0, // events*4 + 20 = mystic health
+            "gems": 0, // score
+            "luck": Math.random() * 0.4 + 0.4, //for potential attack and item drop
+            "power": 10, // events/15 + 10
+            "energy": 3, // events/20 + 3
+            "potential": 10, // events/12 + 10
+            "rich": 1 // gem multiplier
         }
         this.completion = new Set();
         this.inventory = new Set();
@@ -44,24 +56,24 @@ function playGame() {
         var bonuses = ["pet rock", "shiny coin", "lucky pendant", "wooden sword", "diamond sword"];
 
         function addBonus(a) {
-            if (collection.has(a)) {
+            if (inventory.has(a)) {
                 return false;
             }
-            collection.add(a);
+            inventory.add(a);
             switch (a) {
-                case "pet rock":
-                    this.stats.potential += 2;
+                case "pet rock": // gives courage
+                    this.stats.potential += 10;
                     break;
-                case "shiny coin":
+                case "shiny coin": // makes it rain
                     this.stats.rich += 1;
                     break;
-                case "lucky pendant":
-                    this.stats.luck += 0.1;
+                case "lucky pendant": // more luck
+                    this.stats.luck += 0.15;
                     break;
-                case "wooden sword":
+                case "wooden sword": // more damage
                     this.stats.power += 5;
                     break;
-                case "diamond sword":
+                case "diamond sword": // extra damage
                     this.stats.power += 10;
                     break;
                 default:

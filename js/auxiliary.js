@@ -34,6 +34,22 @@ $('document').ready(function () {
     });
 });
 
+function handleSecret(e) {
+    if (e.target.id == "termHeadNavLeft" && currSeq % 2 == 0 || e.target.id == "termHeadNavRight" && currSeq % 2 == 1) {
+        currSeq++;
+        if (currSeq == 4) {
+            revealSecret();
+        }
+    }
+    else if (currSeq < 4) {
+        if (e.target.id == "termHeadNavLeft") {
+            currSeq = 1;
+        }
+        else {
+            currSeq = 0;
+        }
+    }
+}
 function revealSecret() {
     var secretEl = document.getElementById("theSecret");
     secretEl.textContent = atob(secretEl.textContent);

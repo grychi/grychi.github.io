@@ -38,6 +38,7 @@ var manual = {
         'For example, enter "mk myCommand 23*27".',
         'This creates the command "myCommand" to be used.',
         'Calling "myCommand" will then output "621".'],
+    "play": "Just a little game if you're bored.",
     "qu": ['Provides the answers to your yes/no questions.',
         'Usage: "qu Do you think I am cool?" will yield an answer.',
         'Warning: results may be alarming.'],
@@ -93,7 +94,7 @@ var commands = {
         var manText = ['This is a not the typical terminal you are familiar with.',
             'It is very basic and was created just for fun. Nothing will be saved.',
             'The general use is just entering a command followed by parameters.',
-            'For example, enter "all" to list available commands.',
+            'For example, enter "ls" to list available commands.',
             'Apply the proper parameters as specified from "--help".',
             'For example, enter "mk --help" to see parameter description for "mk".',
             'You can use "&&" to execute multiple commands.',
@@ -107,7 +108,9 @@ var commands = {
     },
     "play": function () {
         // mini adventure game
-        var gameText = ['Enter anything to start.', 'Type "end" to end game.'];
+        var gameText = ['Gary\'s Game [Version 0.6.23]',
+            'Enter anything to start.',
+            'Type "end" to end game.'];
         display(gameText, '\n');
         playGame();
     },
@@ -120,7 +123,7 @@ var commands = {
         }
     },
     "secret": function () {
-        var secretText = ['Can you figure out what the secret text says?',
+        var secretText = ['Can you figure out what this is?',
             btoa("left right left right"),
             'Maybe it will lead somewhere.'];
         display(secretText, '\n');

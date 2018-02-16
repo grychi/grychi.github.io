@@ -1,4 +1,5 @@
 var currStr = "";
+var currSeq = 0;
 var menuOpened = false;
 $(function () {
     window.onkeydown = function (e) {
@@ -43,6 +44,8 @@ $(function () {
                 updateTerm();
             }
         });
+        document.getElementById("termHeadNavLeft").addEventListener("click", handleSecret);
+        document.getElementById("termHeadNavRight").addEventListener("click", handleSecret);
         document.getElementById("termHeadNavClose").addEventListener("click", function (e) {
             toggleTerm(false);
         });
@@ -198,11 +201,15 @@ function openModal(ico = "", title = "", link = "", tags = [], desc = "", imgs =
         placeList.appendChild(tmpItem);
     }
 
-    document.getElementById("modal-desc").textContent = desc;
+    var modalDesc = document.getElementById("modal-desc")
+    modalDesc.textContent = desc;
 
     var placeImg = document.getElementById("modal-imgs");
     clearInner(placeImg);
     var textImg = document.createElement("div");
+    textImg.addEventListener("click", function (e) {
+        modalDesc.textContent = desc;
+    });
     textImg.classList.add("modal-img");
     textImg.classList.add("noselect");
     textImg.style.backgroundColor = "#00BCD4";
@@ -210,9 +217,21 @@ function openModal(ico = "", title = "", link = "", tags = [], desc = "", imgs =
     placeImg.appendChild(textImg);
     for (var i = 0; i < imgs.length; i++) {
         var tmpImg = document.createElement("div");
+        showModalImg(tmpImg, i);
         tmpImg.classList.add("modal-img");
         tmpImg.style.backgroundImage = 'url("' + imgDir + imgs[i] + '")';
         placeImg.appendChild(tmpImg);
+    }
+
+    function showModalImg(el, a) {
+        var tmpImg = el;
+        tmpImg.addEventListener("click", function (e) {
+            modalDesc.textContent = "";
+            var tmpShowImg = document.createElement("img");
+            tmpShowImg.src = imgDir + imgs[a];
+            tmpShowImg.style.width = "100%";
+            modalDesc.appendChild(tmpShowImg);
+        });
     }
 
     document.getElementById("modal").style.left = 0;

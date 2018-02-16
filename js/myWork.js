@@ -10,10 +10,10 @@ var workQuickView = {
     "Matui": {
         "link": "/matui",
         "icon": "mat.png",
-        "prev": "mat0.png",
+        "prev": "mat2.png",
         "tags": ["Node.js", "Electron"],
         "desc": "A cross platform web browser with material design user interface. Its significant redesign of the modern browser offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
-        "imgs": ["mat0.png", "mat1.png"]
+        "imgs": ["mat0.png", "mat1.png", "mat2.png", "mat3.png"]
     },
     "garychi.me": {
         "link": "/",
@@ -28,12 +28,12 @@ var workQuickView = {
         "icon": "u.png",
         "prev": "u1.png",
         "tags": ["React", "Cordova", "Bootstrap"],
-        "desc": "U-Start is a platform for entrepreneurs and students in higher-education to showcase their skills and talents, find inspiration, and develop projects collaboratively. It is built using the Go programming language to handle server requests and uses Elasticsearch as its search and analytics engine. Mobile applications are in development.",
+        "desc": "U-Start is a platform for entrepreneurs and students in higher education to showcase their skills and talents, find inspiration, and develop projects collaboratively. The Go programming language is used to handle server requests. Web interface is built with Bootstrap framework. Mobile applications are in development.",
         "imgs": ["u0.png", "u1.png"]
     },
     "Pokemon GR": {
         "link": "https://github.com/grychi",
-        "icon": "",
+        "icon": "pgr.png",
         "prev": "pgr0.png",
         "tags": ["ActionScript 3"],
         "desc": "This is a personal fangame created using ActionScript3.0. I do not own or work for Pokemon/ Nintendo/ Creatures Inc./ GAME FREAK inc. No copyright infringement is intended. All rights belong to their original owner.",
