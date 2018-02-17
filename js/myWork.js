@@ -74,7 +74,7 @@ function appendWorkCard(s) {
     c.appendChild(p);
     c.appendChild(t);
     c.addEventListener("click", function (e) {
-        openModal("img/" + currCard.icon, s, currCard.link, currCard.tags, currCard.desc, currCard.imgs, "img/");
+        openModal(s, "img/" + currCard.icon, currCard.link, currCard.tags, currCard.desc, currCard.imgs, "img/");
     })
     document.getElementById("workShowcase").appendChild(c);
 }
