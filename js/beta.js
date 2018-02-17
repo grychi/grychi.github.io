@@ -198,6 +198,9 @@ function openModal(title = "", ico = "", link = "", tags = [], desc = "", imgs =
     for (var i = 0; i < tags.length; i++) {
         var tmpItem = document.createElement("li");
         tmpItem.textContent = tags[i];
+        tmpItem.addEventListener("click", function (e) {
+            ddgToModal(e, tmpItem.textContent);
+        });
         placeList.appendChild(tmpItem);
     }
 
