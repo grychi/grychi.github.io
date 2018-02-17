@@ -45,7 +45,7 @@ var workQuickView = {
         "prev": "cp0.png",
         "tags": ["Electron"],
         "desc": "An elegant and easy-to-use color tool for UI designers, digital artists, front-end developers, and anyone who wants to play with colors. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
-        "imgs": ["cp0.png"]
+        "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"]
     }
 }
 $('document').ready(function () {

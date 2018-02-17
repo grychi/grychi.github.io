@@ -1,7 +1,7 @@
+// (c) 2018, Gary Chi
+
 var canvas, ctx, canvasW, canvasH;
-
 var colors = ["#FAFAFA", "#ECEFF1", "#607D8B", "#03A9F4", "#673AB7", "#00BCD4", "#9C27B0"];
-
 //x, y, color, direction, delta, wait
 var squares = [];
 

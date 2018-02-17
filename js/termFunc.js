@@ -82,7 +82,7 @@ var commands = {
     },
     "help": function () {
         var helpText = ['Gary\'s Terminal [Version: 1.8.16]',
-            'https://github.com/therealgary',
+            'https://github.com/grychi',
             'Enter "ls" to list all commands',
             'Enter "man" to read the manual']
         display(helpText, '\n');

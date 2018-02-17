@@ -1,3 +1,5 @@
+// (c) 2018, Gary Chi
+
 var inGame = false;
 var currGame;
 function playGame() {

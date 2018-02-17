@@ -1,3 +1,5 @@
+// (c) 2018, Gary Chi
+
 var currStr = "";
 var currSeq = 0;
 var menuOpened = false;
@@ -17,7 +19,7 @@ $(function () {
         currStr = "Gary Chi";
         var gDesc = ['Software Developer',
             'UI/UX Designer',
-            'Student at NYU'];
+            'New York'];
         display(gDesc, '\n');
         currStr = "";
         document.addEventListener("keypress", function (e) {
