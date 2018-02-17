@@ -107,7 +107,8 @@ function openModalSimple(title = "", ico = "", sub = "", desc = "", foot = "") {
 
     var modalDesc = document.getElementById("modal-desc")
     modalDesc.textContent = desc;
-
+    var placeList = document.getElementById("modal-tags-list");
+    placeList.textContent = "";
     var placeFoot = document.getElementById("modal-imgs");
     placeFoot.textContent = "";
     placeFoot.innerHTML = foot;
