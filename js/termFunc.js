@@ -91,8 +91,8 @@ var commands = {
         display(commands);
     },
     "man": function () {
-        var manText = ['This is a not the typical terminal you are familiar with.',
-            'It is very basic and was created just for fun. Nothing will be saved.',
+        var manText = ['Important note: This is a not a real terminal.',
+            'It is just an imitation created for fun. Nothing will be saved.',
             'The general use is just entering a command followed by parameters.',
             'For example, enter "ls" to list available commands.',
             'Apply the proper parameters as specified from "--help".',

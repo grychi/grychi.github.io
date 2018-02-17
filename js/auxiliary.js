@@ -32,6 +32,14 @@ $('document').ready(function () {
             this.textContent = "R";
         }
     });
+    $("#deets li").click(function (e) {
+        var q = e.target.textContent;
+        if (e.target.dataset.query) {
+            q = e.target.dataset.query;
+        }
+        ddgToModal(e, q);
+    });
+
 });
 
 function handleSecret(e) {
@@ -54,4 +62,56 @@ function revealSecret() {
     var secretEl = document.getElementById("theSecret");
     secretEl.textContent = atob(secretEl.textContent);
     secretEl.style.display = "block";
+}
+
+function ddgToModal(e, q) {
+    var appName = "grychigithub";
+    q = q.trim();
+    q = q.toLowerCase();
+    q = encodeURIComponent(q);
+    var xml = new XMLHttpRequest();
+    xml.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            res = JSON.parse(this.responseText);
+            if (res && res.AbstractText) {
+                var tmpImg = res.Image;
+                if (tmpImg == "") {
+                    tmpImg = "img/ddg.svg"
+                }
+                openModalSimple(e.target.textContent, tmpImg, res.Entity, res.AbstractText, '<a href="https://duckduckgo.com/" target="_blank" style="padding: 1em;">Results from DuckDuckGo</a>');
+            }
+        }
+    };
+    appName = '';
+    var charset = 'abcdefghijklmnopqrstuvwxyz';
+    for (var i = 0; i < 8; i++) {
+        appName += charset.charAt(Math.floor(Math.random() * charset.length));
+    }
+    xml.open("GET", "https://api.duckduckgo.com/?q=" + q + "&format=json&no_html=1&skip_disambig=1&t=" + appName, true);
+    xml.send();
+}
+
+// title: string, title in header
+// ico: string, icon path
+// sub: string, subtag
+// desc: string, description
+// foot: string, html of foot
+function openModalSimple(title = "", ico = "", sub = "", desc = "", foot = "") {
+    document.getElementById("modal-title-text").textContent = title;
+    document.getElementById("modal-icon").style.backgroundImage = 'url("' + ico + '")';
+    var placeSub = document.getElementById("modal-title-link");
+    clearInner(placeSub);
+    var tmpLink = document.createElement("p");
+    tmpLink.textContent = sub;
+    placeSub.appendChild(tmpLink);
+
+    var modalDesc = document.getElementById("modal-desc")
+    modalDesc.textContent = desc;
+
+    var placeFoot = document.getElementById("modal-imgs");
+    placeFoot.textContent = "";
+    placeFoot.innerHTML = foot;
+
+    document.getElementById("modal").style.left = 0;
+    document.body.classList.add("noscroll");
 }

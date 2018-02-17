@@ -177,9 +177,9 @@ function scrollTo(a) {
 // desc: string, description
 // imgs: string array, image file name
 // imgDir: string, image directory
-function openModal(ico = "", title = "", link = "", tags = [], desc = "", imgs = [], imgDir = "") {
-    document.getElementById("modal-icon").style.backgroundImage = 'url("' + ico + '")';
+function openModal(title = "", ico = "", link = "", tags = [], desc = "", imgs = [], imgDir = "") {
     document.getElementById("modal-title-text").textContent = title;
+    document.getElementById("modal-icon").style.backgroundImage = 'url("' + ico + '")';
 
     var placeLink = document.getElementById("modal-title-link");
     clearInner(placeLink);
