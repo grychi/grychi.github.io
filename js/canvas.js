@@ -1,7 +1,4 @@
-var canvas;
-var ctx;
-var canvasW;
-var canvasH;
+var canvas, ctx, canvasW, canvasH;
 
 var colors = ["#FAFAFA", "#ECEFF1", "#607D8B", "#03A9F4", "#673AB7", "#00BCD4", "#9C27B0"];
 
