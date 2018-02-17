@@ -11,7 +11,7 @@ body {
     background-color: #FAFAFA;
 }
 .bodyOdd {
-    background-color: #ECEFF1;
+    background-color: #F5F5F5;
 }
 a {
     color: var(--links);
@@ -19,7 +19,7 @@ a {
 }
 .content {
     position: relative;
-    background-color: #ECEFF1;
+    background-color: #F5F5F5;
     min-height: 20vh;
     overflow-y: auto;
     overflow-x: hidden;
