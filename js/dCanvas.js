@@ -33,7 +33,7 @@ function showHex(x, y, c, t = "", l = dCanvasH / 6.8) {
     for (var s = 0; s <= 6; s++) {
         dCtx.lineTo(x + l * Math.cos(s * 2 * Math.PI / 6), y + l * Math.sin(s * 2 * Math.PI / 6));
     }
-    dCtx.shadowBlur = 8;
+    dCtx.shadowBlur = 12;
     dCtx.shadowColor = "#607D8B";
     dCtx.fillStyle = c;
     dCtx.fill();

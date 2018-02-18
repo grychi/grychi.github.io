@@ -60,8 +60,14 @@ function handleSecret(e) {
 }
 function revealSecret() {
     var secretEl = document.getElementById("theSecret");
-    secretEl.textContent = atob(secretEl.textContent);
-    secretEl.style.display = "block";
+    try {
+        secretEl.textContent = atob(secretEl.textContent);
+        secretEl.style.display = "block";
+        return "Oh, you sneaky.";
+    }
+    catch (e) {
+        return "Nope nope.";
+    }
 }
 
 function ddgToModal(e, q) {
