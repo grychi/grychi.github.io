@@ -33,13 +33,13 @@ function showHex(x, y, c, t = "", l = dCanvasH / 6.8) {
     for (var s = 0; s <= 6; s++) {
         dCtx.lineTo(x + l * Math.cos(s * 2 * Math.PI / 6), y + l * Math.sin(s * 2 * Math.PI / 6));
     }
-    dCtx.shadowBlur = 2;
+    dCtx.shadowBlur = 8;
     dCtx.shadowColor = "#607D8B";
     dCtx.fillStyle = c;
     dCtx.fill();
     dCtx.shadowBlur = 0;
     dCtx.shadowColor = "rgba(0,0,0,0)";
-    dCtx.font = "1.4em Catamaran";
+    dCtx.font = "2em Catamaran";
     dCtx.fillStyle = "white";
     dCtx.textAlign = "center";
     dCtx.fillText(t, x, y + 8);
@@ -47,8 +47,8 @@ function showHex(x, y, c, t = "", l = dCanvasH / 6.8) {
 
 function dResizeCanvas() {
     var w = document.getElementById("dCanvasWrap");
-    dCanvas.width = w.clientHeight;
-    dCanvas.height = w.clientWidth;
+    dCanvas.width = w.clientHeight * 2;
+    dCanvas.height = w.clientWidth * 2;
     dCanvasW = dCanvas.width;
     dCanvasH = dCanvas.height;
     deetsHexSet.clear();
