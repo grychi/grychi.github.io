@@ -35,7 +35,6 @@ a {
 }
 .sideCont, .mainCont {
     min-height: 20vh;
-    overflow: auto;
 }
 .orientA {
     float: right;
