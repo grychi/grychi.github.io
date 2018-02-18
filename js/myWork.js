@@ -20,7 +20,7 @@ var workQuickView = {
         "icon": "g.png",
         "prev": "web1.png",
         "tags": ["JQuery", "HTML5"],
-        "desc": "My personal one-page built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple, but demonstrative of my web capabilities. It is hosted with GitHub Pages.",
+        "desc": "My personal one-page built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple but still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
         "imgs": ["web1.png"]
     },
     "U-Start": {
