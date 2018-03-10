@@ -109,7 +109,7 @@ var commands = {
     "play": function () {
         // mini adventure game
         var gameText = ['Gary\'s Game [Version 0.6.23]',
-            'Enter anything to start.',
+            'Press "enter" to start.',
             'Type "end" to end game.'];
         display(gameText, '\n');
         playGame();
@@ -174,7 +174,13 @@ function interpret(a) {
                             return;
                         }
                         else {
-                            display("Unknown command, please try again.")
+                            var simRes = similarTo(c);
+                            if (simRes) {
+                                display('Unknown command, do you mean "' + simRes + '"?');
+                            }
+                            else {
+                                display('Unknown command, please try again.');
+                            }
                         }
                     }
                     catch (err) {
@@ -224,4 +230,32 @@ function display(a, b = " ") {
         tmp.textContent += tmpStr;
     }
     document.getElementById("termBodyOutput").appendChild(tmp);
+}
+
+function similarTo(a) {
+    var similar = 0.5;
+    for (var c in commands) {
+        var dis = LevenshteinDistance(a, a.length, c, c.length);
+        var percentError = ((c.length - dis) / c.length);
+        if (percentError >= similar && percentError != 1 && a.length < c.length + 3) {
+            return c;
+        }
+        else if (percentError == 1) {
+            return c;
+        }
+    }
+    return null;
+}
+
+function LevenshteinDistance(s, len_s, t, len_t) {
+    var cost;
+    if (len_s == 0) return len_t;
+    if (len_t == 0) return len_s;
+    if (s[len_s - 1] == t[len_t - 1])
+        cost = 0;
+    else
+        cost = 1;
+    return Math.min(LevenshteinDistance(s, len_s - 1, t, len_t) + 1,
+        LevenshteinDistance(s, len_s, t, len_t - 1) + 1,
+        LevenshteinDistance(s, len_s - 1, t, len_t - 1) + cost);
 }
