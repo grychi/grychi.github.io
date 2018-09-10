@@ -18,7 +18,7 @@ $(function () {
         }
         currStr = "Gary Chi";
         var gDesc = ['Software Developer',
-            'UI/UX Designer',
+            'Full Stack',
             'New York'];
         display(gDesc, '\n');
         currStr = "";
