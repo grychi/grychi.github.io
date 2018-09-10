@@ -17,8 +17,8 @@ $(function () {
             readjust();
         }
         currStr = "Gary Chi";
-        var gDesc = ['Software Developer',
-            'Full Stack',
+        var gDesc = ['Full Stack',
+            'Application Developer',
             'New York'];
         display(gDesc, '\n');
         currStr = "";
