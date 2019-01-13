@@ -20,7 +20,7 @@ function handleFormSubmit(event) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.onreadystatechange = function () {
         document.body.classList.remove("contactActive");
         document.getElementById('divForm').style.display = 'none';
