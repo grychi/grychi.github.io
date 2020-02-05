@@ -4,32 +4,32 @@ var workQuickView = {
         "icon": "nyu.png",
         "prev": "nyu1.png",
         "tags": ["Google Apps Script", "Flask"],
-        "desc": "I work at the LaGuardia Co-op as a Student Technology Assistant. I have automated common tasks and routine activities using Google Apps Script to create a more efficient workplace. I helped create a system to manage lending items. I have also led workshops to educate and engage others in web development.",
+        "desc": "I worked as a Student Technology Assistant. I used Google Apps Script to create an application and automated tasks. I have also led workshops to educate and engage others in web development.",
         "imgs": ["nyu0.png", "nyu1.png", "nyu2.png"]
     },
     "Matui": {
         "link": "/matui",
         "icon": "mat.png",
-        "prev": "mat2.png",
+        "prev": "mat.png",
         "tags": ["Node.js", "Electron"],
-        "desc": "A cross platform web browser with material design user interface. Its significant redesign of the modern browser offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
+        "desc": "This is my experiment building a browser to understand building desktop applications more indepth. It offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
         "imgs": ["mat0.png", "mat1.png", "mat2.png", "mat3.png"]
+    },
+    "Capital One": {
+        "link": "",
+        "icon": "c1.png",
+        "prev": "c1.png",
+        "tags": ["AWS", "Angular", "Spring Boot"],
+        "desc": "I currently work at Capital One as a full-stack software developer. I have developed and released features for its web platform, managed infrastructure and deployed applications on AWS, monitored logs and created tools to better analyze data. I am excited to be working in cyber security soon.",
+        "imgs": []
     },
     "garychi.me": {
         "link": "/",
         "icon": "g.png",
         "prev": "web1.png",
         "tags": ["JQuery", "HTML5"],
-        "desc": "My personal one-page built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple but still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
+        "desc": "My personal webpage built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple but still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
         "imgs": ["web1.png"]
-    },
-    "U-Start": {
-        "link": "http://ustart.today",
-        "icon": "u.png",
-        "prev": "u1.png",
-        "tags": ["React", "Cordova", "Bootstrap"],
-        "desc": "U-Start is a platform for entrepreneurs and students in higher education to showcase their skills and talents, find inspiration, and develop projects collaboratively. The Go programming language is used to handle server requests. Web interface is built with Bootstrap framework. Mobile applications are in development.",
-        "imgs": ["u0.png", "u1.png"]
     },
     "Pokemon GR": {
         "link": "https://github.com/grychi",
@@ -42,9 +42,9 @@ var workQuickView = {
     "ColorPot": {
         "link": "/ColorPot",
         "icon": "cp.png",
-        "prev": "cp0.png",
+        "prev": "cp.png",
         "tags": ["Electron"],
-        "desc": "An elegant and easy-to-use color tool for UI designers, digital artists, front-end developers, and anyone who wants to play with colors. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
+        "desc": "It is my experiment building a desktop application using material design. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
         "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"]
     }
 }

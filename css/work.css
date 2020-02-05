@@ -71,7 +71,7 @@
 .workCardImg {
     height: 8em;
     background-color: #CFD8DC;
-    background-size: 24em;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
