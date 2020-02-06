@@ -17,10 +17,7 @@ $(function () {
             readjust();
         }
         currStr = "Gary Chi";
-        var gDesc = ['Capital One',
-            'Software Developer',
-            'New York'];
-        display(gDesc, '\n');
+        display('Software Developer at Capital One', '\n');
         currStr = "";
         document.addEventListener("keypress", function (e) {
             if (!document.activeElement.required) {
@@ -46,11 +43,13 @@ $(function () {
                 updateTerm();
             }
         });
-        document.getElementById("termHeadNavLeft").addEventListener("click", handleSecret);
-        document.getElementById("termHeadNavRight").addEventListener("click", handleSecret);
-        document.getElementById("termHeadNavClose").addEventListener("click", function (e) {
-            toggleTerm(false);
-        });
+        if (document.getElementById("termBodyOutput")) {
+            document.getElementById("termHeadNavLeft").addEventListener("click", handleSecret);
+            document.getElementById("termHeadNavRight").addEventListener("click", handleSecret);
+            document.getElementById("termHeadNavClose").addEventListener("click", function (e) {
+                toggleTerm(false);
+            });
+        }
         document.getElementById("quickViewTerm").addEventListener("click", function (e) {
             toggleTerm(true);
         });

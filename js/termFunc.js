@@ -229,7 +229,9 @@ function display(a, b = " ") {
         }
         tmp.textContent += tmpStr;
     }
-    document.getElementById("termBodyOutput").appendChild(tmp);
+    if (document.getElementById("termBodyOutput")) {
+        document.getElementById("termBodyOutput").appendChild(tmp);
+    }
 }
 
 function similarTo(a) {
