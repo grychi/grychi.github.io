@@ -8,7 +8,7 @@ var workQuickView = {
         "imgs": []
     },
     "NYC DoITT": {
-        "link": "https://www1.nyc.gov/nychope/site/page/home",
+        "link": "http://www.nyc.gov/nychope",
         "icon": "nychope.svg",
         "prev": "nychope.svg",
         "tags": ["AngularJS", "CMS", "Oracle SQL", "Spring Boot", "Hibernate"],
@@ -39,7 +39,7 @@ var workQuickView = {
         "desc": "It an experiment for building a desktop application using material design. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
         "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"]
     },
-    "garychi.me": {
+    "garychi.dev": {
         "link": "/",
         "icon": "g.png",
         "prev": "web1.png",
