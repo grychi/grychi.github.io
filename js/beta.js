@@ -17,7 +17,7 @@ $(function () {
             readjust();
         }
         currStr = "Gary Chi";
-        display('Software Developer at Capital One', '\n');
+        display('Software Engineer at Capital One', '\n');
         currStr = "";
         document.addEventListener("keypress", function (e) {
             if (!document.activeElement.required) {
