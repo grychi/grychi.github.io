@@ -118,7 +118,7 @@ function animateCrazyCode() {
         let crazyCodeText = document.getElementById("typing").textContent += crazyCode[crazyCodeIndex];
         crazyCodeIndex = (crazyCodeIndex + 1) % crazyCode.length;
         let crazyCodeTextLines = crazyCodeText.split('\n');
-        if (crazyCodeTextLines.length > 16) {
+        if (crazyCodeTextLines.length > 15) {
             crazyCodeTextLines.shift();
             console.log(crazyCodeTextLines);
             crazyCodeText = crazyCodeTextLines.join('\n');
