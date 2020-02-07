@@ -66,33 +66,41 @@
     white-space: pre-wrap;
 }
 .workCard {
-    background-color: #ECEFF1;
     width: calc(100% - 2em);
     height: 10em;
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     float: left;
     overflow: hidden;
     margin: 1em;
 }
 .workCard:hover {
-    background-color: white;
-    box-shadow: 0 0.1em 0.4em rgba(38, 50, 56, 0.5);
-    -webkit-box-shadow: 0 0.1em 0.4em rgba(38, 50, 56, 0.5);
+    cursor: pointer;
+    box-shadow: 0 0.1em 1em rgba(96, 125, 139, 0.5);
+    -webkit-box-shadow: 0 0.1em 1em rgba(96, 125, 139, 0.5);
 }
 .workCard:last-child {
     margin-bottom: 1em;
 }
 .workCardImg {
+    padding: 0 1em;
     height: 8em;
-    background-color: #CFD8DC;
     background-size: contain;
+    background-origin: content-box;
     background-position: center;
     background-repeat: no-repeat;
+}
+.workCardImg:hover {
+    background-color: #FFFFFF;
 }
 .workCardText {
     text-align: center;
     color: #2196F3;
     font-weight: bold;
+}
+.workCard:hover .workCardText {
+    background-color: #2196F3;
+    color: #FFFFFF;
+    font-weight: normal;
 }
 @media (min-width: 425px) {
     .workCard {
