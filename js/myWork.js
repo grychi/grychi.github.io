@@ -52,7 +52,9 @@ $('document').ready(function () {
     for (var i in workQuickView) {
         appendWorkCard(i);
     }
+    window.requestAnimationFrame(animateCrazyCode);
 });
+
 function appendWorkCard(s) {
     /*
     <div class="workCard">
@@ -77,4 +79,51 @@ function appendWorkCard(s) {
         openModal(s, "img/" + currCard.icon, currCard.link, currCard.tags, currCard.desc, currCard.imgs, "img/");
     })
     document.getElementById("workShowcase").appendChild(c);
+}
+
+var animationSequence = 0;
+var crazyCodeIndex = 0;
+var crazyCode = `let project = new Project;
+startProject();
+
+function startProject() {
+  project.idea = startThinking();
+  if (project.idea != null) {
+    doTheWork();
+  }
+}
+
+function doTheWork() {
+  coding(project);
+  let itWorks = test(project);
+  if (itWorks) {
+    project.done = true;
+  }
+  else {
+    let shouldTryAgain = Math.floor(Math.random() * 2);
+    if (shouldTryAgain) {
+      retry(project);
+    }
+    else {
+      startProject();
+    }
+  }
+}
+
+`;
+
+function animateCrazyCode() {
+    animationSequence = (animationSequence + 1) % 4;
+    if (!animationSequence) {
+        let crazyCodeText = document.getElementById("typing").textContent += crazyCode[crazyCodeIndex];
+        crazyCodeIndex = (crazyCodeIndex + 1) % crazyCode.length;
+        let crazyCodeTextLines = crazyCodeText.split('\n');
+        if (crazyCodeTextLines.length > 16) {
+            crazyCodeTextLines.shift();
+            console.log(crazyCodeTextLines);
+            crazyCodeText = crazyCodeTextLines.join('\n');
+        }
+        document.getElementById("typing").textContent = crazyCodeText;
+    }
+    window.requestAnimationFrame(animateCrazyCode);
 }

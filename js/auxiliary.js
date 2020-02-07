@@ -24,12 +24,13 @@ $('document').ready(function () {
         navStrEl.textContent = "";
     }
     $("#menu a").click(toggleMenu);
-    $("#screen").click(function (e) {
-        if (this.textContent.trim() != "G") {
-            this.textContent = "G";
+    $("#workCanvas").click(function (e) {
+        let screen = document.getElementById("screen");
+        if (screen.textContent.trim() != "G") {
+            screen.textContent = "G";
         }
         else {
-            this.textContent = "R";
+            screen.textContent = "R";
         }
     });
     $("#deets li").click(function (e) {

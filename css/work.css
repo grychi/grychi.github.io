@@ -22,14 +22,14 @@
     top: 20%;
     height: 24vh;
     width: 36vh;
-    background-color: #455A64;
+    background-color: #263238;
     border-radius: 1.5vh;
     color: #FAFAFA;
     line-height: 4;
     text-align: center;
     font-weight: bold;
     font-size: 5vh;
-    text-shadow: 0 0 1em #ECEFF1;
+    text-shadow: 0 0 0.5em #ffffff;
 }
 #screen:after {
     left: 23%;
@@ -44,12 +44,26 @@
     bottom: -20%;
     height: 0;
     width: 6vh;
-    border-bottom: 9vh solid #B0BEC5;
+    border-bottom: calc(5vh - 2px) solid #B0BEC5;
     border-left: 2vh solid transparent;
     border-right: 2vh solid transparent;
 }
 #workShowcase {
     overflow: auto;
+}
+#typing {
+    position: absolute;
+    top: calc(20% + 2vh);
+    left: 1vh;
+    height: 18vh;
+    width: 32vh;
+    padding: 1vh;
+    background: rgba(69, 90, 100, 0.4);
+    color: #4CAF50;
+    font-family: monospace;
+    font-size: 1vh;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 .workCard {
     background-color: #ECEFF1;
