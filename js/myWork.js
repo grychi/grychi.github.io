@@ -4,7 +4,7 @@ var workQuickView = {
         "icon": "c1.png",
         "prev": "c1.png",
         "tags": ["AWS", "Angular", "Spring Boot"],
-        "desc": "I currently work at Capital One as a full-stack software developer. I have developed and released features for its web platform, managed infrastructure and deployed applications on AWS, worked with managed pipelines, monitored logs and created tools to better analyze data. I am also excited to be rotating into a new role soon and I will be doing cyber-security related work.",
+        "desc": "I currently work at Capital One as a full-stack software engineer. I have developed and released features for its web platform, managed infrastructure and deployed applications on AWS, worked with managed pipelines, monitored logs and created tools to better analyze data. I am also excited to be rotating into a new role soon and I will be doing cyber-security related work.",
         "imgs": []
     },
     "NYC DoITT": {
@@ -12,7 +12,7 @@ var workQuickView = {
         "icon": "nychope.svg",
         "prev": "nychope.svg",
         "tags": ["AngularJS", "CMS", "Oracle SQL", "Spring Boot", "Hibernate"],
-        "desc": "I interned at New York City Department of Information Technology & Telecommunications. I worked on a project called NYC Hope. I've added features to the API built with Spring Boot and Hibernate framework which retrieved content from its content management system. I have optimized SQL queries to improve performance. I also added functionality to the AngularJS application and refactored components.",
+        "desc": "I interned at New York City Department of Information Technology & Telecommunications and worked on a project called NYC Hope. I've added features to the API built with Spring Boot + Hibernate which retrieved content from its content management system. I have optimized SQL queries to improve performance. I also added functionality to the AngularJS application and refactored components.",
         "imgs": []
     },
     "NYU IT": {
@@ -20,7 +20,7 @@ var workQuickView = {
         "icon": "nyu.png",
         "prev": "nyu1.png",
         "tags": ["Google Apps Script", "Flask"],
-        "desc": "I worked as a Student Technology Assistant. I used Google Apps Script to create an application and automated tasks. I have also led workshops to educate and engage others in web development.",
+        "desc": "I worked as a Student Technology Assistant at the New York University Information Technology department. I created a web application and used Google Apps Script to automate tasks. I have also led workshops to educate and engage others in web development.",
         "imgs": ["nyu0.png", "nyu1.png", "nyu2.png"]
     },
     "Matui": {
@@ -28,7 +28,7 @@ var workQuickView = {
         "icon": "mat.png",
         "prev": "mat.png",
         "tags": ["Node.js", "Electron"],
-        "desc": "This is my experiment building a browser to understand building desktop applications more indepth. It offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
+        "desc": "This is my experiment of building a browser to understand developing desktop applications more indepth. The browser offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
         "imgs": ["mat0.png", "mat1.png", "mat2.png", "mat3.png"]
     },
     "ColorPot": {
@@ -36,7 +36,7 @@ var workQuickView = {
         "icon": "cp.png",
         "prev": "cp.png",
         "tags": ["Electron"],
-        "desc": "It is my experiment building a desktop application using material design. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
+        "desc": "It an experiment for building a desktop application using material design. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
         "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"]
     },
     "garychi.me": {
@@ -44,7 +44,7 @@ var workQuickView = {
         "icon": "g.png",
         "prev": "web1.png",
         "tags": ["JQuery", "HTML5"],
-        "desc": "My personal webpage built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple but still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
+        "desc": "My personal webpage built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple yet still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
         "imgs": ["web1.png"]
     }
 }
