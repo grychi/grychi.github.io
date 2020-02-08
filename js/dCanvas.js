@@ -71,7 +71,8 @@ function renewHex() {
 
 function dDraw() {
     dCtx.clearRect(0, 0, dCanvasW, dCanvasH);
-    var xOffset = dCanvasW / 16;
+    var xOffset = dCanvasW / 24;
+    var yOffset = dCanvasH / 12;
     for (var i = 0; i < hexagons.length; i++) {
         var currHex = hexagons[i];
         if (currHex[2] < 0) {
@@ -79,7 +80,7 @@ function dDraw() {
             currHex[2] = Math.random() * 6 + 6;
             currHex[3] = renewHex();
         }
-        showHex(xOffset + currHex[0] * dCanvasW / 4.2, currHex[1] * dCanvasH / 7, "rgba(" + currHex[3][1] + "," + currHex[2] + ")", currHex[3][0]);
+        showHex(currHex[0] * dCanvasW / 3.8 - xOffset, currHex[1] * dCanvasH / 6.4 - yOffset, "rgba(" + currHex[3][1] + "," + currHex[2] + ")", currHex[3][0]);
         currHex[2] -= 0.02;
     }
 }

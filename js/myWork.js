@@ -10,7 +10,7 @@ var workQuickView = {
     "NYC DoITT": {
         "link": "http://www.nyc.gov/nychope",
         "icon": "nychope.svg",
-        "prev": "nychope.svg",
+        "prev": "doitt.svg",
         "tags": ["AngularJS", "CMS", "Oracle SQL", "Spring Boot", "Hibernate"],
         "desc": "I interned at New York City Department of Information Technology & Telecommunications and worked on a project called NYC Hope. I've added features to the API built with Spring Boot + Hibernate which retrieved content from its content management system. I have optimized SQL queries to improve performance. I also added functionality to the AngularJS application and refactored components.",
         "imgs": []

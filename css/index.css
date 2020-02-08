@@ -196,7 +196,7 @@ html {
 	position: relative;
 	width: 40vh;
 	height: 40vh;
-	margin: auto;
+	margin: 2em auto 0 auto;
 }
 #deetsCanvas {
 	height: 100%;
