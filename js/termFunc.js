@@ -100,10 +100,9 @@ var commands = {
         display('Hey...');
     },
     "info": function () {
-        var helpText = ['Gary\'s Terminal [Version: 1.8.16]',
-            'https://github.com/grychi',
-            'Enter "ls" to list all commands',
-            'Enter "man" to read the manual']
+        var helpText = ['Terminal [Version: 1.8.16]',
+            '(c) 2020 Gary Chi',
+            'https://github.com/grychi']
         display(helpText, '\n');
     },
     "ls": function () {
@@ -114,8 +113,7 @@ var commands = {
         display("");
     },
     "play": function () {
-        // mini adventure game
-        var gameText = ['Gary\'s Game [Version 0.6.23]',
+        var gameText = ['Mini Adventure Game',
             'Press "enter" to start.',
             'Type "end" to end game.'];
         display(gameText, '\n');
