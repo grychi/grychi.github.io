@@ -1,4 +1,4 @@
-var quOut = [
+var askingResults = [
     "It is certain",
     "It is decidedly so",
     "Without a doubt",
@@ -22,26 +22,27 @@ var quOut = [
 ];
 var manual = {
     "about": "Shows the section with a description about me and what I do.",
-    "cat": ['Concatenates function to standard output. Example:',
-        '"cat hello" outputs the function source code for "hello"'],
+    "asking": ['Provides the answers to your yes/no questions.',
+        'Usage: "asking am I cool?" will provide an answer.',
+        'Warning: results may be alarming.'],
+    "cat": ['Displays the source code of a command.',
+        'Usage: "cat hello" outputs the source code for "hello"'],
     "contact": "Shows the section with a form to contact me.",
     "clear": "Clears the current terminal display.",
     "date": "Outputs the current date provided by JavaScript.",
     "details": "Shows the section with details of my skills.",
-    "echo": ['Outputs the user input. For example:',
-        '"echo just saying hi" outputs "just saying hi"'],
-    "hello": "How are you?",
-    "help": "Provides a quick summary of this terminal.",
+    "echo": ['Outputs the line of text that was entered.',
+        'Usage: "echo ring ring" outputs "ring ring"'],
+    "hi": "How are you?",
+    "hello": "What can I help you with?",
+    "help": "Outputs a general description of how to use this terminal.",
+    "info": "Provides a quick summary of this terminal.",
     "ls": "Lists all available commands of this terminal.",
-    "man": "Outputs a general description of how to use this terminal.",
     "mk": ['Adds a new command to use for the current session.',
         'For example, enter "mk myCommand 23*27".',
         'This creates the command "myCommand" to be used.',
         'Calling "myCommand" will then output "621".'],
     "play": "Just a little game if you're bored.",
-    "qu": ['Provides the answers to your yes/no questions.',
-        'Usage: "qu Do you think I am cool?" will yield an answer.',
-        'Warning: results may be alarming.'],
     "secret": "Shhh",
     "sort": ['Returns the input sorted in alphabetical order.',
         'Usage: "sort bananas apples" will return "apples bananas".'],
@@ -52,6 +53,14 @@ var commands = {
     "about": function () {
         scrollTo("#about");
         display("");
+    },
+    "asking": function () {
+        if (arguments.length == 0) {
+            display("What do you want to know?");
+        }
+        else {
+            display(askingResults[Math.floor(Math.random() * askingResults.length)]);
+        }
     },
     "cat": function (a) {
         display(commands[a]);
@@ -81,6 +90,16 @@ var commands = {
         display('Hi there!');
     },
     "help": function () {
+        var helpText = ['To get started, enter "ls" to list available commands.',
+            'Enter a command followed by "--help" to learn how to use it.',
+            'Example: "mk --help" describes the function and parameters for "mk".',
+            'Note: This is a not a real terminal, just a fun little something.']
+        display(helpText, '\n');
+    },
+    "hi": function () {
+        display('Hey...');
+    },
+    "info": function () {
         var helpText = ['Gary\'s Terminal [Version: 1.8.16]',
             'https://github.com/grychi',
             'Enter "ls" to list all commands',
@@ -89,18 +108,6 @@ var commands = {
     },
     "ls": function () {
         display(commands);
-    },
-    "man": function () {
-        var manText = ['Important note: This is a not a real terminal.',
-            'It is just an imitation created for fun. Nothing will be saved.',
-            'The general use is just entering a command followed by parameters.',
-            'For example, enter "ls" to list available commands.',
-            'Apply the proper parameters as specified from "--help".',
-            'For example, enter "mk --help" to see parameter description for "mk".',
-            'You can use "&&" to execute multiple commands.',
-            'Piping commands is unavailable. Basic arithmetic is possible.',
-            'Try playing around with this yourself. Enjoy.']
-        display(manText, '\n');
     },
     "mk": function (a, b) {
         commands[a] = function () { display(eval(b)); };
@@ -113,14 +120,6 @@ var commands = {
             'Type "end" to end game.'];
         display(gameText, '\n');
         playGame();
-    },
-    "qu": function () {
-        if (arguments.length == 0) {
-            display("What do you want to know?");
-        }
-        else {
-            display(quOut[Math.floor(Math.random() * quOut.length)]);
-        }
     },
     "secret": function () {
         var secretText = ['Can you figure out what this is?',
