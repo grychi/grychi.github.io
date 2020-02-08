@@ -18,7 +18,7 @@ var workQuickView = {
     "NYU IT": {
         "link": "https://www.nyu.edu/it/laguardia-co-op",
         "icon": "nyu.png",
-        "prev": "nyu1.png",
+        "prev": "nyulogo.png",
         "tags": ["Google Apps Script", "Flask"],
         "desc": "I worked as a Student Technology Assistant at the New York University Information Technology department. I created a web application and used Google Apps Script to automate tasks. I have also led workshops to educate and engage others in web development.",
         "imgs": ["nyu0.png", "nyu1.png", "nyu2.png"]
@@ -29,7 +29,8 @@ var workQuickView = {
         "prev": "mat.png",
         "tags": ["Node.js", "Electron"],
         "desc": "This is my experiment of building a browser to understand developing desktop applications more indepth. The browser offers an intuitive minimalistic user interface, simple tab management, search suggestions, pinning options, and a dark theme. Matui uses Chromium and Node.js technologies and is built with Electron.",
-        "imgs": ["mat0.png", "mat1.png", "mat2.png", "mat3.png"]
+        "imgs": ["mat0.png", "mat1.png", "mat2.png", "mat3.png"],
+        "hide": true
     },
     "ColorPot": {
         "link": "/ColorPot",
@@ -37,7 +38,8 @@ var workQuickView = {
         "prev": "cp.png",
         "tags": ["Electron"],
         "desc": "It an experiment for building a desktop application using material design. The tool allows for manipulation of multiple colors at the same time. It also provides smart color interpretation, generates color suggestions, and offers theme recommendations.",
-        "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"]
+        "imgs": ["cp0.png", "cp1.png", "cp2.png", "cp3.png"],
+        "hide": true
     },
     "garychi.dev": {
         "link": "/",
@@ -45,7 +47,8 @@ var workQuickView = {
         "prev": "web1.png",
         "tags": ["JQuery", "HTML5"],
         "desc": "My personal webpage built from scratch to tell the world about me. It also serves as a playing ground for my front-end development and my designs. I try to keep my webpage simple yet still demonstrative of my capabilities. It is hosted with GitHub Pages. Also, there are a few easter eggs, so enjoy exploring!",
-        "imgs": ["web1.png"]
+        "imgs": ["web1.png"],
+        "hide": true
     }
 }
 $('document').ready(function () {
@@ -67,6 +70,9 @@ function appendWorkCard(s) {
     var c = document.createElement("div");
     c.classList.add("noselect");
     c.classList.add("workCard");
+    if (currCard.hide) {
+        c.classList.add("phoneGone")
+    }
     var p = document.createElement("div");
     p.classList.add("workCardImg");
     p.style.backgroundImage = 'url("img/' + currCard.prev + '")';

@@ -1,11 +1,11 @@
 @charset "utf-8";
 html {
     --writing: #00BCD4;
-    --bubble: #CFD8DC;
+    --bubble: #5C6BC0;
 }
 .contactActive {
     --writing: #FFC107;
-    --bubble: white;
+    --bubble: #FF8F00;
 }
 #chatBubB,#chatBubW {
     height: 18vh;
@@ -56,10 +56,10 @@ html {
     left: 30%;
     top: 15%;
     padding: 2vh;
-    background: #FFEB3B;
+    background: #FFC107;
 }
 #mouth,.eye {
-    background: #455A64;
+    background: #004D40;
 }
 #mouth {
     width: 60%;

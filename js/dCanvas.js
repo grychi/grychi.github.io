@@ -39,7 +39,7 @@ function showHex(x, y, c, t = "", l = dCanvasH / 6.8) {
     dCtx.fill();
     dCtx.shadowBlur = 0;
     dCtx.shadowColor = "rgba(0,0,0,0)";
-    dCtx.font = "2em Catamaran";
+    dCtx.font = "bold 2em Catamaran";
     dCtx.fillStyle = "white";
     dCtx.textAlign = "center";
     dCtx.fillText(t, x, y + 8);
