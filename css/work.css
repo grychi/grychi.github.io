@@ -66,6 +66,7 @@
     white-space: pre-wrap;
 }
 .workCard {
+    transition: none;
     width: calc(100% - 2em);
     height: 10em;
     border-radius: 0.5em;
@@ -77,6 +78,8 @@
     cursor: pointer;
     box-shadow: 0 0.1em 1em rgba(96, 125, 139, 0.5);
     -webkit-box-shadow: 0 0.1em 1em rgba(96, 125, 139, 0.5);
+    margin-top: calc(1em - 2px);
+    margin-bottom: calc(1em + 2px);
 }
 .workCard:last-child {
     margin-bottom: 1em;
