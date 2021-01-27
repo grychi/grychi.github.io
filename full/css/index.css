@@ -225,9 +225,10 @@ html {
 	padding: 0.2em;
     border-radius: 0.5em;
     cursor: pointer;
+    background: #546E7A;
 }
 .foot-icon:hover {
-    background: #546E7A;
+    background: #FFFFFF;
 }
 .foot-icon img {
     height: 100%;
